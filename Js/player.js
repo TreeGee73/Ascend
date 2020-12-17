@@ -1,5 +1,5 @@
 let player;
-    
+
 function Player(classType, health, attack, defense, speed) {
     this.classType = classType;
     // this.name = name;
@@ -17,12 +17,12 @@ let PlayerMoves = {
         let playerAttack = function() {
         let calcBaseDamage;
         calcBaseDamage = player.attack - enemy.defense;
-        
+
         let offsetDamage = Math.floor(Math.random() * Math.floor(10));
         let calcTotal = calcBaseDamage + offsetDamage;
         return calcTotal;
         }
-    
+
         let enemyAttack = function() {
         let calcBaseDamage;
         calcBaseDamage = enemy.attack - player.defense;
@@ -44,9 +44,9 @@ let PlayerMoves = {
             getEnemyHealth.innerHTML = 'Health: 0';
         } else {
             getEnemyHealth.innerHTML = 'Health: ' + enemy.health;
-            
+
             let totalDamage = enemyAttack();
-            
+
             player.health = player.health - totalDamage;
             alert("Enemy hit for " + totalDamage);
         if (player.health <= 0) {
@@ -56,7 +56,7 @@ let PlayerMoves = {
         } else {
             getPlayerHealth.innerHTML = 'Health: ' + player.health;
         }
-    
+
         }
         }
         else if (getEnemySpeed >= getPlayerSpeed) {
@@ -69,9 +69,9 @@ let PlayerMoves = {
             getPlayerHealth.innerHTML = 'Health: 0';
         } else {
             getPlayerHealth.innerHTML = 'Health: ' + player.health;
-            
+
             let totalDamage = playerAttack();
-            
+
             enemy.health = enemy.health - totalDamage;
             alert("You hit for " + totalDamage);
         if (enemy.health <= 0) {
@@ -81,9 +81,28 @@ let PlayerMoves = {
         } else {
             getEnemyHealth.innerHTML = 'Health: ' + enemy.health;
         }
-    
+
         }
         }
-   
+
     }
 }
+
+const Sequelize = require("sequelize");
+const sequelize = require("../config/connection");
+
+const characters = sequelize.define(
+  "characters",
+  {
+    name: Sequelize.STRING,
+    health: Sequelize.INTEGER,
+    attack: Sequelize.INTEGER,
+    defense: Sequelize.INTEGER,
+    speed: Sequelize.INTEGER,
+  },
+  { timestamps: false }
+);
+
+characters.sync();
+
+module.exports = characters;
