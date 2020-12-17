@@ -1,72 +1,123 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>ASCEND - Climb the Tower</title>
     <!-- CSS -->
-        <!-- Bootstrap -->
-        <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous'>
-        <!-- Google Fonts -->
-        <link rel='preconnect' href='https://fonts.gstatic.com'>
-        <link href='https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap' rel='stylesheet'>
-        <!-- Custom -->
-        <link rel='stylesheet' href='../assets/style.css'>
+    <!-- Bootstrap -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous'>
+    <!-- Google Fonts -->
+    <link rel='preconnect' href='https://fonts.gstatic.com'>
+    <link href='https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap' rel='stylesheet'>
+    <!-- Custom -->
+    <link rel='stylesheet' href='../assets/style.css'>
     <!-- JavaScript -->
-        <!-- Bootstrap Required -->
-        <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js' integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW' crossorigin='anonymous'></script>
+    <!-- Bootstrap Required -->
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'
+        integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW'
+        crossorigin='anonymous'></script>
 </head>
-<body>
+
+<body class='body-index'>
     <!-- Header: Contains only hero image -->
     <header class='hero'></header>
 
     <!-- Container: Text and Data Collection for Game from Player -->
-    <div class='container cont-padded'>
+    <section class='content container cont-bg-mgr'>
         <div class='row'>
-            <div class='col-md-9 cont-bg-mgr'>
+            <!-- Row 1: Challenge -->
+            <div class='col-md-12'>
                 <h1>Can you duel your way to the top of the tower??</h1>
-                <div class='row'>
-                    <div class='col-md-12'>
-                        <form>
-                            <div class='form-group'>
-                                <label for='playerName'>Enter Your Player Name:</label>
-                                <input type='text' class='form-control' id='playerName' placeholder='SmashnBtns02'>
-                            </div>
-                        </form>
+            </div>
+        </div>
+        <div class='row'>
+            <!-- Row 2: Player Name Entry -->
+            <div class='col-md-12'>
+                <form>
+                    <div class='form-group'>
+                        <label for='playerName'>Enter Your Player Name:</label>
+                        <input type='text' class='form-control' id='playerName' placeholder='SmashnBtns02'>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+        <div class='row' style='margin-top: 2rem;'>
+            <!-- Row 3: Character Selection -->
+            <!-- Warrior Card -->
+            <div class='col-md-3'>
+                <div class="card">
+                    <header class="card__thumb">
+                        <a href="#"><img src="https://nerdarchy.com/wp-content/uploads/2017/01/fighter.jpg"/></a>
+                    </header>
+                    <div class="card__body">
+                        <!-- <div class="card__category"><a href="#">pet</a></div> -->
+                        <h2 class="card__title"><a href="#">Bruth Spiritreaper, Warrior</a></h2>
+                        <div class="card__subtitle">Warriors have high health, but have a slower attack speed</div>
+                        <p class="card__description">Health: 200<br>Attack: 50<br>Defense: 40<br>Speed: 60</p>
                     </div>
                 </div>
-                <div class='row' style='margin-top: 5rem;'>
-                    <div class='col-md-8'>
-                        <form action="/action_page.php">
-                          <label for="charSelect" style="margin-right: 2rem;">Choose a Champion:</label>
-                          <select name="charSelect" id="charSelect">
-                              <option value="assassin">Assassin</option>
-                              <option value="cleric">Cleric</option>
-                              <option value="barbarian">Barbarian</option>
-                              <option value="fighter">Fighter</option>
-                              <option value="mage">Mage</option>
-                          </select>
-                        </form>
-                    </div>
-                    <div class='col-md-4' id='randomChar'>
-                        <button class='button btn-click btn-random' value='random'>Pick Random Champion</button>
+            </div>
+            <!-- Rogue Card -->
+            <div class='col-md-3'>
+                <div class="card">
+                    <header class="card__thumb">
+                        <a href="#"><img src="https://alzrius.files.wordpress.com/2014/07/rogue.jpg"/></a>
+                    </header>
+                    <div class="card__body">
+                        <!-- <div class="card__category"><a href="#">pet</a></div> -->
+                        <h2 class="card__title"><a href="#">Lacina, Rogue</a></h2>
+                        <div class="card__subtitle">Rogues have high speed, deal mediocre health damage, but have a chance to crit</div>
+                        <p class="card__description">Health: 120<br>Attack: 70<br>Defense: 20<br>Speed: 100</p>
                     </div>
                 </div>
-                <div class="row" style='margin-top: 5rem;'>
-                    <div class='col-md-5' id='startGame'></div>
-                    <div class='col-md-4' id='startGame'>
-                        <button class='button btn-click btn-start' value='start'>Climb the Tower!</button>
+            </div>
+            <!-- Mage Card -->
+            <div class='col-md-3'>
+                <div class="card">
+                    <header class="card__thumb">
+                        <a href="#"><img src="https://pre08.deviantart.net/0685/th/pre/i/2014/322/9/f/frost_mage_by_2blind2draw-d86ufe6.jpg"/></a>
+                    </header>
+                    <div class="card__body">
+                        <!-- <div class="card__category"><a href="#">pet</a></div> -->
+                        <h2 class="card__title"><a href="#">Ziu Qaim, Mage</a></h2>
+                        <div class="card__subtitle">Mages have low health, but deal more damage</div>
+                        <p class="card__description">Health: 100<br>Attack: 150<br>Defense: 0<br>Speed: 75</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Hunter Card -->
+            <div class='col-md-3'>
+                <div class="card">
+                    <header class="card__thumb">
+                        <a href="#"><img src="https://66.media.tumblr.com/30492177cf21af292483c783e5f10e0b/tumblr_inline_ok5gznoWDS1uudcoe_1280.jpg"/></a>
+                    </header>
+                    <div class="card__body">
+                        <!-- <div class="card__category"><a href="#">pet</a></div> -->
+                        <h2 class="card__title"><a href="#">Gwendolyn Helton, Hunger</a></h2>
+                        <div class="card__subtitle">Hunters have a balance of health, speed, and damage</div>
+                        <p class="card__description">Health: 150<br>Attack: 90<br>Defense: 30<br>Speed: 80</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Container -->
+        <div class='row' style='margin-top: 2rem;'>
+            <!-- Row 4: Start Game -->
+            <div class='col-md-5' id='startGame'></div>
+            <div class='col-md-4' id='startGame'>
+                <button class='button btn-click btn-start' value='start'>Climb the Tower!</button>
+            </div>
+    </section>
+        <!-- End Container -->
 
-    <!-- Footer -->
-    <footer>
-    <hr />
-        <h2>ASCEND &copy; AHANBCTG</h2>
-    </footer>
+        <!-- Footer -->
+        <footer>
+            <hr />
+            <h2>ASCEND &copy; AHANBCTG</h2>
+        </footer>
 </body>
+
 </html>
