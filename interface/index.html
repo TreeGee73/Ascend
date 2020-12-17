@@ -1,50 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="../Js/gamemanager.js"></script>
-    <script src="../Js/player.js"></script>
-    <!-- <script src="/Js/Minions.js"></script> -->
-    <!-- <script src="/Js/Bosses.js"></script> -->
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>ASCEND - Climb the Tower</title>
+    <!-- CSS -->
+        <!-- Bootstrap -->
+        <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous'>
+        <!-- Google Fonts -->
+        <link rel='preconnect' href='https://fonts.gstatic.com'>
+        <link href='https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap' rel='stylesheet'>
+        <!-- Custom -->
+        <link rel='stylesheet' href='../assets/style.css'>
+    <!-- JavaScript -->
+        <!-- Bootstrap Required -->
+        <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js' integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW' crossorigin='anonymous'></script>
 </head>
 <body>
-    <div class="header">
-        <p>Play dis now!</p>
-        <h2>Choose your character</h2>
+    <!-- Header: Contains only hero image -->
+    <header class='hero'></header>
+
+    <!-- Container: Text and Data Collection for Game from Player -->
+    <div class='container cont-padded'>
+        <div class='row'>
+            <div class='col-md-9 cont-bg-mgr'>
+                <h1>Can you duel your way to the top of the tower??</h1>
+                <div class='row'>
+                    <div class='col-md-12'>
+                        <form>
+                            <div class='form-group'>
+                                <label for='playerName'>Enter Your Player Name:</label>
+                                <input type='text' class='form-control' id='playerName' placeholder='SmashnBtns02'>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class='row' style='margin-top: 5rem;'>
+                    <div class='col-md-8'>
+                        <form action="/action_page.php">
+                          <label for="charSelect" style="margin-right: 2rem;">Choose a Champion:</label>
+                          <select name="charSelect" id="charSelect">
+                              <option value="assassin">Assassin</option>
+                              <option value="cleric">Cleric</option>
+                              <option value="barbarian">Barbarian</option>
+                              <option value="fighter">Fighter</option>
+                              <option value="mage">Mage</option>
+                          </select>
+                        </form>
+                    </div>
+                    <div class='col-md-4' id='randomChar'>
+                        <button class='button btn-click btn-random' value='random'>Pick Random Champion</button>
+                    </div>
+                </div>
+                <div class="row" style='margin-top: 5rem;'>
+                    <div class='col-md-5' id='startGame'></div>
+                    <div class='col-md-4' id='startGame'>
+                        <button class='button btn-click btn-start' value='start'>Climb the Tower!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="interface">
-        <a href="#" onclick="GameManager.setGameStart('warrior')">
-            <img src="../img/warrior_crest.png" alt="warrior">
-            <h3>Warrior</h3>
-            <p>Warriors have high health and slow speed</p>
-        </a>
-        <a href="#" onclick="GameManager.setGameStart('rogue')">
-            <img src="../img/rogue_crest.png" alt="rogue">
-            <h3>Rogue</h3>
-            <p>High speed, mediocre health damage. chance to crit</p>
-        </a>
-        <a href="#" onclick="GameManager.setGameStart('mage')">
-            <img src="../img/mage_crest.png" alt="mage">
-            <h3>Mage</h3>
-            <p>Low health high damage</p>
-        </a>
-        <a href="#" onclick="GameManager.setGameStart('hunter')">
-            <img src="../img/hunter_crest.png" alt="hunter">
-            <h3>hunter</h3>
-            <p>Balanced fighter</p>
-        </a>
-        
-    </div>
-    <div class="actions">
-        
-    </div>
-    <div class="arena">
-        
-    </div>
-    <div class="enemy">
-        
-    </div>
+    <!-- End Container -->
 </body>
 </html>
