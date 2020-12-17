@@ -1,0 +1,58 @@
+body {
+    background-image: url('images/tower_background.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-color: #111518;
+    font-family: 'Eagle Lake', cursive;
+    color: #d6b580
+}
+
+.hero {
+    background-image: url('images/ascend.png');
+    height: 250px;
+    margin-bottom: 10rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+h3 {
+    font-style: italic;
+    text-align: center;
+}
+
+.cont-bg-mgr {
+    background-color: rgba(131, 50, 50, 0.5);
+    justify-content: center;
+    padding: 3rem;
+}
+
+.btn-random {
+    background-color: #9f7634;
+    color: #111518;
+    height: 3rem;
+}
+
+.btn-random:hover {
+    background-color: #886327;
+}
+
+.btn-start {
+    background-color: #9f7634;
+    color: #111518;
+    height: 3rem;
+}
+
+.btn-start:hover {
+    background-color: #886327;
+}
