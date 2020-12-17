@@ -9,13 +9,13 @@ let GameManager = {
                 player = new Player(classType, 200, 50, 40, 60);
                 break;
             case "rogue":
-                player = new Player(classType, 120, 70, 20, 100);
+                player = new Player(classType, 120, 90, 20, 100);
                 break;
             case "mage":
-                 player = new Player(classType, 100, 150, 0, 75);
+                 player = new Player(classType, 80, 150, 0, 75);
                  break;
             case "hunter":
-                 player = new Player(classType, 150, 90, 30, 80);
+                 player = new Player(classType, 120, 90, 30, 80);
                  break;
         }
         let getInterface = document.querySelector(".interface");
@@ -37,8 +37,11 @@ let GameManager = {
         let getEnemy = document.querySelector(".enemy");
         // create enemy
         let enemy0 = new Enemy("Goblin", 80, 40, 20, 50);
-        let enemy1 = new Enemy("Troll", 150, 50, 30, 70);
-        let chooseRandom = Math.floor(Math.random() * Math.floor(2));
+        let enemy1 = new Enemy("Goblin Shaman", 75, 90, 20, 75);
+        let enemy2 = new Enemy("Troll", 250, 50, 30, 60);
+        let enemy3 = new Enemy("Hobgolin", 150, 70, 25, 50);
+        let enemy4 = new Enemy("Goblin Rider", 100, 70, 10, 110);
+        let chooseRandom = Math.floor(Math.random() * Math.floor(5));
         console.log(chooseRandom);
         switch (chooseRandom){
             case 0:
@@ -46,6 +49,15 @@ let GameManager = {
                 break;
             case 1:
                 enemy = enemy1;
+                break;
+            case 2:
+                enemy = enemy2;
+                break;
+            case 3:
+                enemy = enemy3;
+                break;
+            case 4:
+                enemy = enemy4;
                 break;
         }
         getHeader.innerHTML = '<p>Task: Choose your move</p>';
