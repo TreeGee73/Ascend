@@ -8,9 +8,20 @@ body {
     color: #d6b580
 }
 
+.body-combat{
+    background-image: url('https://cdn.epicstream.com/assets/uploads/ckeditor/images/1571949169_islander2.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-color: #111518;
+    font-family: 'Eagle Lake', cursive;
+    color: #d6b580
+}
+
 .hero {
     background-image: url('images/ascend.png');
-    height: 250px;
+    height: 200px;
     margin-bottom: 10rem;
     background-repeat: no-repeat;
     background-position: center;
@@ -55,4 +66,32 @@ h3 {
 
 .btn-start:hover {
     background-color: #886327;
+}
+
+.player-div {
+    background-color: rgba(76, 75, 80, 0.5);
+    border: .5rem solid #4c4c4f;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.boostCard {
+    max-height: 10rem;
+    border: .5rem;
+    border-color: #4c4c4f;
+    border-radius: inherit;
+}
+
+.char-pix {
+    max-width: inherit;
+    border: .5rem;
+    border-color: #4c4c4f;
+    border-radius: inherit;
+}
+
+.opponent-div {
+    background-color: rgba(96, 0, 1, 0.5);
+    border: .5rem solid #4c4c4f;
+    justify-content: center;
+    padding: 3rem;
 }
