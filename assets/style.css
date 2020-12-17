@@ -215,11 +215,26 @@ h3 {
 }
 
 .champ-health {
-    position:relative;
+    position: relative;
     right: 15px;
     top: -35px;
     text-align: right;
     font-size: 1.25rem;
+}
+
+.btn-attack {
+    position: relative;
+    left: 150px;
+    margin-top: 1rem;
+    max-width: 10rem;
+    background-color: #884040;
+    color: #111518;
+    height: 3rem;
+}
+
+.btn-attack:hover {
+    background-color: #600000;
+    color: #d6b580;
 }
 
 /* .boostCard {
