@@ -1,31 +1,4 @@
-.body-index {
-    background-image: url('images/tower_background.jpg');
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-color: #111518;
-    font-family: 'Eagle Lake', cursive;
-    color: #d6b580
-}
-
-.body-combat{
-    background-image: url('https://cdn.epicstream.com/assets/uploads/ckeditor/images/1571949169_islander2.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    background-color: #111518;
-    font-family: 'Eagle Lake', cursive;
-    color: #d6b580
-}
-
-.hero {
-    background-image: url('images/ascend.png');
-    height: 100px;
-    margin: 2rem;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+/* General Tag Styles */
 
 h1 {
     font-weight: bold;
@@ -42,75 +15,40 @@ h3 {
     text-align: center;
 }
 
+/*  */
+/* Class styles used on all pages */
+/*  */
+
+.hero {
+    background-image: url('images/ascend.png');
+    height: 100px;
+    margin: 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .cont-bg-mgr {
     background-color: rgba(131, 50, 50, 0.5);
     justify-content: center;
     padding: 3rem;
 }
 
-.btn-random {
-    background-color: #9f7634;
-    color: #111518;
-    height: 3rem;
+/*  */
+/* Class Styles for index.html */
+/*  */
+
+.body-index {
+    background-image: url('images/tower_background.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-color: #111518;
+    font-family: 'Eagle Lake', cursive;
+    color: #d6b580
 }
 
-.btn-random:hover {
-    background-color: #886327;
-}
-
-.btn-start {
-    background-color: #9f7634;
-    color: #111518;
-    height: 3rem;
-}
-
-.btn-start:hover {
-    background-color: #886327;
-}
-
-.player-div {
-    background-color: rgba(76, 75, 80, 0.5);
-    border: .5rem solid #4c4c4f;
-    justify-content: center;
-    padding: 3rem;
-}
-
-.boostCard {
-    max-height: 10rem;
-    border: .5rem;
-    border-color: #4c4c4f;
-    border-radius: inherit;
-}
-
-.char-pix {
-    max-width: 15rem;
-    border: .5rem;
-    border-color: #4c4c4f;
-    border-radius: inherit;
-}
-
-.enemy-pix {
-    max-width: 18rem;
-    border: .5rem;
-    border-color: #4c4c4f;
-    border-radius: inherit;
-}
-
-.opponent-div {
-    background-color: rgba(96, 0, 1, 0.5);
-    border: .5rem solid #4c4c4f;
-    justify-content: center;
-    padding: 3rem;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+/* Character Selection Cards */
 .card {
-    /* position: absolute; */
     top: 50%;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0);
@@ -218,6 +156,56 @@ h3 {
     transition-delay: 0.2s;
 }
 
+/* .btn-start {
+    background-color: #9f7634;
+    color: #111518;
+    height: 3rem;
+}
+
+.btn-start:hover {
+    background-color: #886327;
+}
+
+.btn-random {
+    background-color: #9f7634;
+    color: #111518;
+    height: 3rem;
+}
+
+.btn-random:hover {
+    background-color: #886327;
+} */
+
+/*  */
+/* Class Styles for combat.html */
+/*  */
+
+.body-combat{
+    background-image: url('https://cdn.epicstream.com/assets/uploads/ckeditor/images/1571949169_islander2.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-color: #111518;
+    font-family: 'Eagle Lake', cursive;
+    color: #d6b580
+}
+
+/* Player Character Div */
+.player-div {
+    background-color: rgba(76, 75, 80, 0.5);
+    border: .5rem solid #4c4c4f;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.char-pix {
+    max-width: 15rem;
+    border: .5rem;
+    border-color: #4c4c4f;
+    border-radius: inherit;
+}
+
 .champ-name {
     position:relative;
     left: 15px;
@@ -234,9 +222,33 @@ h3 {
     font-size: 1.25rem;
 }
 
+/* .boostCard {
+    max-height: 10rem;
+    border: .5rem;
+    border-color: #4c4c4f;
+    border-radius: inherit;
+} */
+
+/* Enemy Character Div */
+
+.enemy-pix {
+    max-width: 18rem;
+    border: .5rem;
+    border-color: #4c4c4f;
+    border-radius: inherit;
+    margin-left: 5rem;
+}
+
+.opponent-div {
+    background-color: rgba(96, 0, 1, 0.5);
+    border: .5rem solid #4c4c4f;
+    justify-content: center;
+    padding: 3rem;
+}
+
 .enemy-name {
     position:relative;
-    right: 15px;
+    right: 25px;
     top: -35px;
     text-align: right;
     font-size: 1.25rem;
@@ -248,4 +260,46 @@ h3 {
     top: -35px;
     text-align: left;
     font-size: 1.25rem;
+}
+
+.versus {
+    max-width: 10rem;
+    margin-left: 2rem;
+    margin-top: 16rem;
+}
+
+/* Game Play Div */
+
+.player-name {
+    text-align: left;
+    font-size: 1.25rem;
+}
+
+.player-card {
+    width: 18rem;
+    height: 15rem;
+}
+
+.player-info {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #4c4c4f;
+}
+
+.gameplay-card {
+    width: 36rem;
+    height: 15rem;
+}
+.gameplay-info {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #4c4c4f;
+}
+
+.skill-card {
+    width: 18rem;
+    height: 15rem;
+}
+
+.skill-info {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #4c4c4f;
 }

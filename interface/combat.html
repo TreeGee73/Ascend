@@ -66,18 +66,19 @@
             </div>
             <!-- VS Column -->
             <div class='col-md-2'>
-                <div class='row' style="margin-top: 17rem;">
-                    <img src='https://comicvine1.cbsistatic.com/uploads/original/11130/111300953/5440456-4284025-6271335549-vs.pn.png' alt='versus' style="max-width: 10rem;" />
+                <div class='row'>
+                    <img src='https://comicvine1.cbsistatic.com/uploads/original/11130/111300953/5440456-4284025-6271335549-vs.pn.png' alt='versus' class="versus" />
                 </div>
             </div>
+            <!-- Troll Div -->
             <div class='col-md-5 opponent-div' id='troll-div'>
                 <!-- Champion Row: Name / Health -->
                 <div class='row'>
                     <div class='col-md-8'>
-                        <h2 class='champ-name'>Troll</h2>
+                        <h2 class='enemy-name'>Troll</h2>
                     </div>
                     <div class='col-md-4'>
-                        <h2 class='champ-health'>200 HP</h2>
+                        <!-- <h2 class='champ-health'>200 HP</h2> -->
                     </div>
                 </div>
                 <div class='row'>
@@ -87,31 +88,40 @@
                 </div>
             </div>
         </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div class="row cont-bg-mgr" style="margin-top: 3rem;">
-            <div class='col-md-3'>Player Info</div>
-            <div class='col-md-6'>Game Play Messages</div>
-            <div class='col-md-3'>Skill Cards {Sprinkles}</div>
+                    <div class='col-md-3'>
+                        <div class="card player-card">
+                            <div class="card-header">
+                                <h3 class='player-name' id='player-name'>SmashnBtns02</h3>
+                            </div>
+                            <div class="card-body player-info" id="player-info">
+                                Level 1 Warrior<br>
+                                XP: 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gold: 0
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-md-6'>
+                        <div class="card gameplay-card">
+                            <div class="card-header">
+                                <h3 class='player-name' id='game-spam'>Gameplay Window</h3>
+                            </div>
+                            <div class="card-body gameplay-info" id="gameplay-info">
+                            You attack for 50 points of damage.<br>
+                            Troll attacks for 60 points of damage.
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-md-3'>
+                        <div class="card skill-card">
+                            <div class="card-header">
+                                <h3 class='player-name' id='skill-name'>Choose Your Skill</h3>
+                            </div>
+                            <div class="card-body skill-info" id="skill-info">
+                                Sprinkle * Sprinkle<br>
+                                Future Development
+                            </div>
+                        </div>
+                    </div>
         </div>
     </section>
     <!-- End Container -->
