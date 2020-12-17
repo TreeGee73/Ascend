@@ -83,7 +83,14 @@ h3 {
 }
 
 .char-pix {
-    max-width: inherit;
+    max-width: 15rem;
+    border: .5rem;
+    border-color: #4c4c4f;
+    border-radius: inherit;
+}
+
+.enemy-pix {
+    max-width: 18rem;
     border: .5rem;
     border-color: #4c4c4f;
     border-radius: inherit;
@@ -95,27 +102,12 @@ h3 {
     justify-content: center;
     padding: 3rem;
 }
-/*  */
-/**
-* VARIABLES
-**/
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
-/* body {
-    font-family: "Open Sans";
-    font-size: 16px;
-    background-color: #eee;
-} */
-
-
-/**
-* CARD
-**/
 
 .card {
     /* position: absolute; */
@@ -139,40 +131,6 @@ h3 {
 .card:hover {
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
 }
-
-
-/**
-* DATE
-**/
-
-/* .card__date {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 45px;
-    height: 45px;
-    padding-top: 10px;
-    background-color: coral;
-    border-radius: 50%;
-    color: #fff;
-    text-align: center;
-    font-weight: 700;
-    line-height: 13px;
-}
-
-.card__date__day {
-    font-size: 14px;
-}
-
-.card__date__month {
-    text-transform: uppercase;
-    font-size: 10px;
-} */
-
-
-/**
-* THUMB
-**/
 
 .card__thumb {
     height: 245px;
@@ -204,11 +162,6 @@ h3 {
     transform: scale(1.2);
 }
 
-
-/**
-* card_BODY
-**/
-
 .card__body {
     position: relative;
     height: 185px;
@@ -220,19 +173,6 @@ h3 {
 .card:hover .card__body {
     height: 300px;
 }
-
-/* .card__category {
-    position: absolute;
-    top: -25px;
-    left: 0;
-    height: 25px;
-    padding: 0 15px;
-    background-color: coral;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 11px;
-    line-height: 25px;
-} */
 
 .card__title {
     margin: 0;
@@ -277,23 +217,35 @@ h3 {
     -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
 }
-/* 
-.card__footer {
-    position: absolute;
-    bottom: 12px;
-    left: 20px;
-    right: 20px;
-    font-size: 11px;
-    color: #A3A9A2;
-} */
 
-.icon {
-    display: inline-block;
-    vertical-align: middle;
-    margin: -2px 0 0 2px;
-    font-size: 18px;
+.champ-name {
+    position:relative;
+    left: 15px;
+    top: -35px;
+    text-align: left;
+    font-size: 1.25rem;
 }
 
-.icon+.icon {
-    padding-left: 10px;
+.champ-health {
+    position:relative;
+    right: 15px;
+    top: -35px;
+    text-align: right;
+    font-size: 1.25rem;
+}
+
+.enemy-name {
+    position:relative;
+    right: 15px;
+    top: -35px;
+    text-align: right;
+    font-size: 1.25rem;
+}
+
+.enemy-health {
+    position:relative;
+    left: 15px;
+    top: -35px;
+    text-align: left;
+    font-size: 1.25rem;
 }
