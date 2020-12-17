@@ -15,14 +15,19 @@
     <!-- JavaScript -->
         <!-- Bootstrap Required -->
         <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js' integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW' crossorigin='anonymous'></script>
+        <!-- Custom -->
+        <script src="../Js/gamemanager.js"></script>
+        <script src="../Js/player.js"></script>
+        <script src="../Js/enemy.js"></script>
 </head>
 <body class='body-combat'>
     <!-- Header: Contains only hero image -->
     <header class='hero'></header>
 
     <!-- Container: Character and Opponent Windows -->
-    <div class='container cont-padded'>
+    <section class='content container'>
         <div class='row'>
+            <!-- Player Column -->
             <div class='col-md-5 player-div'>
                 <div class='row'>
                     <h2>Fighter</h2>
@@ -48,14 +53,17 @@
                     </div>
                 </div>
             </div>
+            <!-- VS Column -->
             <div class='col-md-2'>
-                <img src='https://comicvine1.cbsistatic.com/uploads/original/11130/111300953/5440456-4284025-6271335549-vs.pn.png' alt='versus' style="max-width: 10rem;" />
+                <div class='row'>
+                    <img src='https://comicvine1.cbsistatic.com/uploads/original/11130/111300953/5440456-4284025-6271335549-vs.pn.png' alt='versus' style="max-width: 10rem;" />
+                </div>
             </div>
             <div class='col-md-5 cont-bg-mgr opponent-div'>
                 
             </div>
         </div>
-    </div>
+    </section>
     <!-- End Container -->
 
     <!-- Footer -->
