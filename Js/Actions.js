@@ -1,0 +1,8 @@
+
+
+function Attack(){
+
+};
+function Defend(){
+
+};
