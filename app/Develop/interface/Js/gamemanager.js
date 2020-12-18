@@ -20,9 +20,12 @@ let GameManager = {
         }
         let getInterface = document.querySelector(".interface");
         getInterface.innerHTML = '<img src="../img/' + classType.toLowerCase() + 
-        '_crest.png" class="img-avatar"><div><h3>' + classType + '</h3><p class="health-player">Health: '
-         + player.health + '</p><p class="attack-player">Attack: ' + player.attack + '</p><p class="defense-player">Defense: ' + player.defense + 
-         '</p><p class="speed-player">Speed: ' +player.speed + '</p><p class="player-exp">XP: '+ player.exp + '</p></div>';
+        '_crest.png" class="img-avatar"><div><h3>' + classType + '</h3><h2 class="health-player">Health: '
+         + player.health + '</h2><h2 class="attack-player">Attack: ' + player.attack + '</h2><h2 class="defense-player">Defense: ' + player.defense + 
+         '</h2><h2 class="speed-player">Speed: ' +player.speed + '</h2><h2 class="player-exp">XP: '+ player.exp + '</p></div>';
+        
+         getPlayerAttack.textContent = `Attack: ${player.attack}`;
+         getPlayerDefense.textContent = ``
 
     },
     setPreFight: function() {
