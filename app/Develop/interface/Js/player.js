@@ -44,18 +44,18 @@ let PlayerMoves = {
             getPlayerSpeed.innerHTML = 'Speed: ' + player.speed;
             getPlayerExp.innerHTML = 'XP: ' + player.exp;
         }
-        let getPlayerHealth = document.querySelector(".health-player");
-        let getPlayerAttack = document.querySelector(".attack-player");
+        let getPlayerHealth = document.querySelector("#health-player");
+        let getPlayerAttack = document.querySelector("#attack-player");
         // integrate these to html
-        let getEnemyHealth = document.querySelector(".health-enemy");
-        let getEnemyAttack = document.querySelector(".attack-enemy");
-        let getPlayerDefense = document.querySelector(".defense-player");
-        let getEnemyDefense = document.querySelector(".defense-enemy");
-        // let getPlayerSpeed = document.querySelector(".speed-player");
-        // let getEnemySpeed = document.querySelector(".speed-enemy");
+        let getEnemyHealth = document.querySelector("#health-enemy");
+        let getEnemyAttack = document.querySelector("#attack-enemy");
+        let getPlayerDefense = document.querySelector("#defense-player");
+        let getEnemyDefense = document.querySelector("#defense-enemy");
+        // let getPlayerSpeed = document.querySelector("#speed-player");
+        // let getEnemySpeed = document.querySelector("#speed-enemy");
         // integrate these to html
-        let getPlayerExp = document.querySelector(".player-exp");
-        let getEnemyExp =document.querySelector(".enemy-exp");
+        let getPlayerExp = document.querySelector("#player-exp");
+        let getEnemyExp =document.querySelector("#enemy-exp");
         if (getPlayerSpeed >= getEnemySpeed) {
             let calcTotal = playerAttack();
             enemy.health = enemy.health - calcTotal;
