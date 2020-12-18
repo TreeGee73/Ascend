@@ -1,6 +1,8 @@
 const Sequelize = require("sequelize");
 const sequelize = require("../config/connection");
 
+const db = {};
+
 const enemy = sequelize.define(
   "enemy",
   {
@@ -30,3 +32,4 @@ player.sync();
 
 module.exports = enemy;
 module.exports = player;
+module.exports = db;
