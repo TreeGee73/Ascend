@@ -1,7 +1,7 @@
 {
   "name": "acsend",
   "version": "1.0.0",
-  "description": "",
+  "description": "* [Description](#description)\r   * [User Story](#userstory)\r   * [Wireframes](#demo)\r   * [APIs to be Used](#apis)\r   * [Contributing to This Project](#contributefaq)",
   "main": "enemy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,8 +10,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.7.6",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanhuynh1021/Ascend-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alanhuynh1021/Ascend-/issues"
+  },
+  "homepage": "https://github.com/alanhuynh1021/Ascend-#readme"
 }
