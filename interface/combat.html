@@ -35,7 +35,7 @@
                         <h2 class='champ-name'>Bruth Spiritreaper</h2>
                     </div>
                     <div class='col-md-4'>
-                        <h2 class='champ-health'>200 HP</h2>
+                        <h2 class='champ-health' id='health-player'></h2>
                     </div>
                 </div>
                 <div class='row'>
@@ -43,19 +43,19 @@
                         <div class='row'>
                             <div>
                                 <!-- <img src='https://news.toyark.com/wp-content/uploads/sites/4/2017/04/Modern-Masters-2017-Foil-Restoration-Angel-Magic-The-Gathering-31.jpg' class='boostCard' alt='Boost Card' /> -->
-                                <h2>Attack: 50</h2>
+                                <h2 id='attack-player'></h2>
                             </div>
                         </div>                        
                         <div class='row'>
                             <div>
                                 <!-- <img src='https://news.toyark.com/wp-content/uploads/sites/4/2017/04/Modern-Masters-2017-Foil-Restoration-Angel-Magic-The-Gathering-31.jpg' class='boostCard' alt='Boost Card' /> -->
-                                <h2>Defence: 40</h2>
+                                <h2 id='defense-player'></h2>
                             </div>
                         </div>
                         <div class='row'>
                             <div>
                                 <!-- <img src='https://news.toyark.com/wp-content/uploads/sites/4/2017/04/Modern-Masters-2017-Foil-Restoration-Angel-Magic-The-Gathering-31.jpg' class='boostCard' alt='Boost Card' /> -->
-                                <h2>Speed: 60</h2>
+                                <h2 id='speed-player'></h2>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div class='row'>
-                    <button class='btn btn-attack' id='start'>Attack!</button>
+                    <button class='btn btn-attack' id='start'>Climb Tower & Attack!</button>
                 </div>
             </div>
             <!-- VS Column -->
@@ -81,12 +81,32 @@
                         <h2 class='enemy-name'>Troll</h2>
                     </div>
                     <div class='col-md-4'>
-                        <!-- <h2 class='champ-health'>200 HP</h2> -->
+                        <h2 class='champ-health' id='health-enemy'></h2>
                     </div>
                 </div>
                 <div class='row'>
-                    <div class='col-md-5' style="align-content: center;">
+                    <div class='col-md-5'>
                         <img src='https://i.imgur.com/yyt7bs8.jpg' class='enemy-pix' alt='enemy' />
+                    </div>
+                    <div class='col-md-5 boost'>
+                        <div class='row'>
+                            <div>
+                                <!-- <img src='https://news.toyark.com/wp-content/uploads/sites/4/2017/04/Modern-Masters-2017-Foil-Restoration-Angel-Magic-The-Gathering-31.jpg' class='boostCard' alt='Boost Card' /> -->
+                                <h2 id='attack-enemy'></h2>
+                            </div>
+                        </div>                        
+                        <div class='row'>
+                            <div>
+                                <!-- <img src='https://news.toyark.com/wp-content/uploads/sites/4/2017/04/Modern-Masters-2017-Foil-Restoration-Angel-Magic-The-Gathering-31.jpg' class='boostCard' alt='Boost Card' /> -->
+                                <h2 id='defense-enemy'></h2>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div>
+                                <!-- <img src='https://news.toyark.com/wp-content/uploads/sites/4/2017/04/Modern-Masters-2017-Foil-Restoration-Angel-Magic-The-Gathering-31.jpg' class='boostCard' alt='Boost Card' /> -->
+                                <h2 id='speed-enemy'></h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -99,7 +119,7 @@
                             </div>
                             <div class="card-body player-info" id="player-info">
                                 Level 1 Warrior<br>
-                                XP: 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gold: 0
+                                XP: <span id=player-exp></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gold: 0
                             </div>
                         </div>
                     </div>
