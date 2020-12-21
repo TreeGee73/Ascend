@@ -20,9 +20,10 @@ h3 {
 /*  */
 
 .hero {
-    background-image: url('../assets/images/ascend.png');
+    background-image: url('/assets/images/ascend.png');
     height: 100px;
     margin: 2rem;
+    margin-top: 0px;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -38,7 +39,7 @@ h3 {
 /*  */
 
 .body-index {
-    background-image: url('../assets/images/tower_background.jpg');
+    background-image: url('/assets/images/tower_background.jpg');
     background-size: auto;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -191,7 +192,7 @@ h3 {
 /*  */
 
 .body-combat{
-    background-image: url('../assets/images/floor1_background.jpg');
+    background-image: url('/assets/images/floor1_background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
