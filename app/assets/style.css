@@ -20,7 +20,7 @@ h3 {
 /*  */
 
 .hero {
-    background-image: url('images/ascend.png');
+    background-image: url('../assets/images/ascend.png');
     height: 100px;
     margin: 2rem;
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@ h3 {
 /*  */
 
 .body-index {
-    background-image: url('images/tower_background.jpg');
+    background-image: url('../assets/images/tower_background.jpg');
     background-size: auto;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -91,7 +91,7 @@ h3 {
 }
 
 .card:hover .card__thumb {
-    height: 130px;
+    height: 100px;
 }
 
 .card:hover .card__thumb img {
@@ -102,21 +102,21 @@ h3 {
 
 .card__body {
     position: relative;
-    height: 185px;
+    height: 200px;
     padding: 20px;
     -webkit-transition: height 0.5s;
     transition: height 0.5s;
 }
 
 .card:hover .card__body {
-    height: 300px;
+    height: 350px;
 }
 
 .card__title {
     margin: 0;
     padding: 0 0 10px 0;
     color: #886327;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -132,7 +132,7 @@ h3 {
     position: absolute;
     left: 20px;
     right: 20px;
-    bottom: 25px;
+    bottom: 75px;
     margin: 0;
     padding: 0;
     color: #d6b580;
@@ -156,17 +156,27 @@ h3 {
     transition-delay: 0.2s;
 }
 
-/* .btn-start {
+.card__footer {
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    right: 20px;
+    font-size: 11px;
+    color: #A3A9A2;
+}
+
+.btn-start {
     background-color: #9f7634;
     color: #111518;
     height: 3rem;
+    width: 13rem;
 }
 
 .btn-start:hover {
     background-color: #886327;
 }
 
-.btn-random {
+/* .btn-random {
     background-color: #9f7634;
     color: #111518;
     height: 3rem;
