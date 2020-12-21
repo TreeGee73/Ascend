@@ -191,7 +191,7 @@ h3 {
 /*  */
 
 .body-combat{
-    background-image: url('https://cdn.epicstream.com/assets/uploads/ckeditor/images/1571949169_islander2.jpeg');
+    background-image: url('../assets/images/floor1_background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
