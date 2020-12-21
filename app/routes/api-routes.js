@@ -1,4 +1,4 @@
-const db = require("../models/characters");
+const db = require("../../models");
 
 module.exports = function (app) {
 
@@ -6,6 +6,7 @@ module.exports = function (app) {
         try {
             res.json(await db.enemy.findAll());
         } catch (err) {
+            console.log(err);
             res.status(500).end();
         }
     });
