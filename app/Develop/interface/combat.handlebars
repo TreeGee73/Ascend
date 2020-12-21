@@ -29,6 +29,7 @@
         <div class='row'>
             <!-- Warrior Div -->
             <div class='col-md-5 player-div' id='warrior-div' >
+            {{#each player}}
                 <!-- Champion Row: Name / Health -->
                 <div class='row'>
                     <div class='col-md-8'>
@@ -66,6 +67,7 @@
                     <button class='btn btn-attack' id='start_game'>Climb Tower &amp; Attack!</button>
                     <button class='btn btn-attack' id='find_enemy'>Find Your Next Enemy!</button>
                 </div>
+                {{/each}}
             </div>
             <!-- VS Column -->
             <div class='col-md-2'>
@@ -75,6 +77,7 @@
             </div>
             <!-- Troll Div -->
             <div class='col-md-5 opponent-div' id='troll-div'>
+                {{#each enemy}}
                 <!-- Champion Row: Name / Health -->
                 <div class='row'>
                     <div class='col-md-8'>
@@ -106,6 +109,7 @@
                         </div>
                     </div>
                 </div>
+            {{/each}}
             </div>
         </div>
         <div class="row cont-bg-mgr" style="margin-top: 3rem;">
