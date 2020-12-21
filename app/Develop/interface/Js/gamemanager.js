@@ -33,6 +33,22 @@ let GameManager = {
         // getArena.style.visibility = 'visible';
     },
     setFight: function() {
+        function getPosts(category) {
+            var categoryString = category || "";
+            if (categoryString) {
+              categoryString = "/category/" + categoryString;
+            }
+            $.get("/api/posts" + categoryString, function(data) {
+              console.log("Posts", data);
+              posts = data;
+              if (!posts || !posts.length) {
+                displayEmpty();
+              }
+              else {
+                initializeRows();
+              }
+            });
+          }
         let getHeader = document.querySelector(".header");
         let getActions = document.querySelector(".actions");
         let getEnemy = document.querySelector("#enemy");

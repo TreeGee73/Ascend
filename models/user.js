@@ -1,6 +1,13 @@
 module.exports = function(sequelize, DataTypes) {
     const user = sequelize.define("user", {
-        name: {
+          classType: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+              len: [1]
+            }
+         },  
+          name: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -37,6 +44,13 @@ module.exports = function(sequelize, DataTypes) {
           },
           experience: {
             type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+              len: [1]
+            }
+          },
+          image: {
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
               len: [1]
