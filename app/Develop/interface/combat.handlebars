@@ -33,30 +33,28 @@
                 <div class='row'>
                     <div class='col-md-8'>
                         <h2 class='champ-name'
-                        id="player-name"></h2>
+                        id="player-name">{{ player-name }}</h2>
                     </div>
                     <div class='col-md-4'>
-                        <h2 class='champ-health' id='health-player'></h2>
+                        <h2 class='champ-health' id='health-player'>{{ health-player }}</h2>
                     </div>
                 </div>
                 <div class='row'>
                     <div class='col-md-5 boost'>
                         <div class='row'>
                             <div>
-                                <!-- <img src='https://news.toyark.com/wp-content/uploads/sites/4/2017/04/Modern-Masters-2017-Foil-Restoration-Angel-Magic-The-Gathering-31.jpg' class='boostCard' alt='Boost Card' /> -->
-                                <h2 id='attack-player'></h2>
+                                <h2 id='attack-player'>{{ attack-player }}</h2>
                             </div>
                         </div>                        
                         <div class='row'>
                             <div>
-                                <!-- <img src='https://news.toyark.com/wp-content/uploads/sites/4/2017/04/Modern-Masters-2017-Foil-Restoration-Angel-Magic-The-Gathering-31.jpg' class='boostCard' alt='Boost Card' /> -->
-                                <h2 id='defense-player'></h2>
+                                
+                                <h2 id='defense-player'>{{ defense-player }}</h2>
                             </div>
                         </div>
                         <div class='row'>
                             <div>
-                                <!-- <img src='https://news.toyark.com/wp-content/uploads/sites/4/2017/04/Modern-Masters-2017-Foil-Restoration-Angel-Magic-The-Gathering-31.jpg' class='boostCard' alt='Boost Card' /> -->
-                                <h2 id='speed-player'></h2>
+                                <h2 id='speed-player'>{{ speed-player }}</h2>
                             </div>
                         </div>
                     </div>
@@ -65,7 +63,10 @@
                     </div>
                 </div>
                 <div class='row'>
-                    <button class='btn btn-attack' id='start'>Climb Tower & Attack!</button>
+                    <button class='btn btn-attack' onclick="PlayerMoves.calcAttack()" id='start'>Climb Tower & Attack!</button>
+                    <button class='btn btn-attack' onclick="GameManager.setFight()" id='start'>Find an Enemy!</button>
+                    <button class='btn btn-attack' id='start_game'>Climb Tower &amp; Attack!</button>
+                    <button class='btn btn-attack' onclick="GameManager.setFight()" id='find_enemy'>Find Your Next Enemy!</button>
                 </div>
             </div>
             <!-- VS Column -->
@@ -79,10 +80,10 @@
                 <!-- Champion Row: Name / Health -->
                 <div class='row'>
                     <div class='col-md-8'>
-                        <h2 class='enemy-name'>Troll</h2>
+                        <h2 class='enemy-name'>{{enemy-name}}</h2>
                     </div>
                     <div class='col-md-4'>
-                        <h2 class='champ-health' id='health-enemy'></h2>
+                        <h2 class='champ-health' id='health-enemy'>{{health-enemy}}</h2>
                     </div>
                 </div>
                 <div class='row'>
@@ -92,20 +93,17 @@
                     <div class='col-md-5 boost'>
                         <div class='row'>
                             <div>
-                                <!-- <img src='https://news.toyark.com/wp-content/uploads/sites/4/2017/04/Modern-Masters-2017-Foil-Restoration-Angel-Magic-The-Gathering-31.jpg' class='boostCard' alt='Boost Card' /> -->
-                                <h2 id='attack-enemy'></h2>
+                            <h2 id='attack-enemy'>{{attack-enemy}}</h2>
                             </div>
                         </div>                        
                         <div class='row'>
                             <div>
-                                <!-- <img src='https://news.toyark.com/wp-content/uploads/sites/4/2017/04/Modern-Masters-2017-Foil-Restoration-Angel-Magic-The-Gathering-31.jpg' class='boostCard' alt='Boost Card' /> -->
-                                <h2 id='defense-enemy'></h2>
+                                <h2 id='defense-enemy'>{{defense-enemy}}</h2>
                             </div>
                         </div>
                         <div class='row'>
                             <div>
-                                <!-- <img src='https://news.toyark.com/wp-content/uploads/sites/4/2017/04/Modern-Masters-2017-Foil-Restoration-Angel-Magic-The-Gathering-31.jpg' class='boostCard' alt='Boost Card' /> -->
-                                <h2 id='speed-enemy'></h2>
+                                <h2 id='speed-enemy'>{{speed-enemy}}</h2>
                             </div>
                         </div>
                     </div>
@@ -120,7 +118,7 @@
                             </div>
                             <div class="card-body player-info" id="player-info">
                                 Level 1 Warrior<br>
-                                XP: <span id=player-exp></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gold: 0
+                                XP: <span id=player-exp>{{player-exp}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gold: 0
                             </div>
                         </div>
                     </div>
