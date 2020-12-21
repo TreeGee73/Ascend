@@ -65,7 +65,8 @@
                     </div>
                 </div>
                 <div class='row'>
-                    <button class='btn btn-attack' id='start'>Climb Tower & Attack!</button>
+                    <button class='btn btn-attack' onclick="PlayerMoves.calcAttack()" id='start'>Climb Tower & Attack!</button>
+                    <button class='btn btn-attack' onclick="GameManager.setFight()" id='start'>Find an Enemy!</button>
                 </div>
             </div>
             <!-- VS Column -->
@@ -79,7 +80,7 @@
                 <!-- Champion Row: Name / Health -->
                 <div class='row'>
                     <div class='col-md-8'>
-                        <h2 class='enemy-name'>Troll</h2>
+                        <h2 id= 'enemy' class='enemy-name'>Troll</h2>
                     </div>
                     <div class='col-md-4'>
                         <h2 class='champ-health' id='health-enemy'></h2>

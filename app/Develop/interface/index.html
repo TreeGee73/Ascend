@@ -19,9 +19,9 @@
         <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'
         integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW'
         crossorigin='anonymous'></script>
-        <!-- <script src="Js/gamemanager.js"></script>
+        <script src="Js/gamemanager.js"></script>
         <script src="Js/player.js"></script>
-        <script src="Js/enemy.js"></script> -->
+        <script src="Js/enemy.js"></script>
         <!-- Custom -->
 </head>
 
@@ -60,15 +60,15 @@
                     <header class="card__thumb">
                         <img src="../../assets/images/warrior.jpg"/>
                     </header>
-                    <div class="card__body">
+                    <a href="combat.html"><div class="card__body">
                         <h2 class="card__title">Bruth Spiritreaper</h2>
                         <h3 class="card__title">Warrior</h3>
                         <div class="card__subtitle">Warriors have high health, but have a slower attack speed</div>
                         <p class="card__description">Health: 200<br>Attack: 50<br>Defense: 40<br>Speed: 60</p>
                         <footer class="card__footer">
-                            <button class='btn btn-primary btn-start' id='warriorBtn'>Enter the Tower!</button>
+                            <a href="combat.html" class='btn btn-primary btn-start' onclick="GameManager.resetPlayer('warrior')" id='warriorBtn'>Enter the Tower!</a>
                         </footer>
-                    </div>
+                    </div></a>
                 </div>
             </div>
             <!-- Rogue Card -->
