@@ -11,25 +11,27 @@ const enemy = sequelize.define(
     attack: Sequelize.INTEGER,
     defense: Sequelize.INTEGER,
     speed: Sequelize.INTEGER,
+    experience: Sequelize.INTEGER,
   },
   { timestamps: false }
 );
 
-const player = sequelize.define(
-  "player",
+const user = sequelize.define(
+  "user",
   {
     name: Sequelize.STRING,
     health: Sequelize.INTEGER,
     attack: Sequelize.INTEGER,
     defense: Sequelize.INTEGER,
     speed: Sequelize.INTEGER,
+    experience: Sequelize.INTEGER,
   },
   { timestamps: false }
 );
 
 enemy.sync();
-player.sync();
+user.sync();
 
 module.exports = enemy;
-module.exports = player;
+module.exports = user;
 module.exports = db;
