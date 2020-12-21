@@ -1,0 +1,33 @@
+    {{ #each enemy }}
+                <!-- Champion Row: Name / Health -->
+                <div class='row'>
+                    <div class='col-md-8'>
+                        <h2 class='enemy-name'>{{enemy-name}}</h2>
+                    </div>
+                    <div class='col-md-4'>
+                        <h2 class='champ-health' id='health-enemy'>{{health-enemy}}</h2>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-5'>
+                        <img src='https://i.imgur.com/yyt7bs8.jpg' class='enemy-pix' alt='enemy' />
+                    </div>
+                    <div class='col-md-5 boost'>
+                        <div class='row'>
+                            <div>
+                            <h2 id='attack-enemy'>{{attack-enemy}}</h2>
+                            </div>
+                        </div>                        
+                        <div class='row'>
+                            <div>
+                                <h2 id='defense-enemy'>{{defense-enemy}}</h2>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div>
+                                <h2 id='speed-enemy'>{{speed-enemy}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    {{ /each }}

@@ -1,0 +1,39 @@
+<!-- Champion Row: Name / Health -->
+            {{#each player}}
+                <div class='row'>
+                    <div class='col-md-8'>
+                        <h2 class='champ-name'
+                        id="player-name">{{ player-name }}</h2>
+                    </div>
+                    <div class='col-md-4'>
+                        <h2 class='champ-health' id='health-player'>{{ health-player }}</h2>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-5 boost'>
+                        <div class='row'>
+                            <div>
+                                <h2 id='attack-player'>{{ attack-player }}</h2>
+                            </div>
+                        </div>                        
+                        <div class='row'>
+                            <div>
+                                
+                                <h2 id='defense-player'>{{ defense-player }}</h2>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div>
+                                <h2 id='speed-player'>{{ speed-player }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-md-5'>
+                        <img src='../../../assets/images/{{ image-player }}' class='char-pix' alt='Character' />
+                    </div>
+                </div>
+                <div class='row'>
+                    <button class='btn btn-attack' id='start_game' onclick="PlayerMoves.calcAttack()" >Climb Tower &amp; Attack!</button>
+                    <button class='btn btn-attack' id='find_enemy' onclick="GameManager.setFight()">Find Your Next Enemy!</button>
+                </div>
+                {{/each}}
