@@ -29,7 +29,7 @@
         <div class='row'>
             <!-- Player Div -->
             <div class='col-md-5 player-div' id='player-div' >
-                {{{ body-player }}}
+                {{>player player=player}}
             </div>
             <!-- VS Column -->
             <div class='col-md-2'>
@@ -39,7 +39,7 @@
             </div>
             <!-- Enemy Div -->
             <div class='col-md-5 opponent-div' id='troll-div'>
-                {{{ body-enemy }}}
+                {{>enemy enemy=enemy}}
             </div>
         </div>
         <div class="row cont-bg-mgr" style="margin-top: 3rem;">
