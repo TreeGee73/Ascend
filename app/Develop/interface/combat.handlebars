@@ -64,8 +64,10 @@
                     </div>
                 </div>
                 <div class='row'>
+                    <button class='btn btn-attack' onclick="PlayerMoves.calcAttack()" id='start'>Climb Tower & Attack!</button>
+                    <button class='btn btn-attack' onclick="GameManager.setFight()" id='start'>Find an Enemy!</button>
                     <button class='btn btn-attack' id='start_game'>Climb Tower &amp; Attack!</button>
-                    <button class='btn btn-attack' id='find_enemy'>Find Your Next Enemy!</button>
+                    <button class='btn btn-attack' onclick="GameManager.setFight()" id='find_enemy'>Find Your Next Enemy!</button>
                 </div>
                 {{/each}}
             </div>
