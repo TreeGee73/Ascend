@@ -1,3 +1,4 @@
+
 let player;
 
 function Player(classType, name, health, attack, defense, speed, exp) {
@@ -9,8 +10,6 @@ function Player(classType, name, health, attack, defense, speed, exp) {
   this.speed = speed;
   this.exp = exp;
 }
-
-module.exports = playerSelect;
 
 let PlayerMoves = {
   calcAttack: function () {
