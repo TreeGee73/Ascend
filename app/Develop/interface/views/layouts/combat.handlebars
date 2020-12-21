@@ -27,49 +27,9 @@
     <!-- Container: Character and Opponent Windows -->
     <section class='content container'>
         <div class='row'>
-            <!-- Warrior Div -->
-            <div class='col-md-5 player-div' id='warrior-div' >
-            {{#each player}}
-                <!-- Champion Row: Name / Health -->
-                <div class='row'>
-                    <div class='col-md-8'>
-                        <h2 class='champ-name'
-                        id="player-name">{{ player-name }}</h2>
-                    </div>
-                    <div class='col-md-4'>
-                        <h2 class='champ-health' id='health-player'>{{ health-player }}</h2>
-                    </div>
-                </div>
-                <div class='row'>
-                    <div class='col-md-5 boost'>
-                        <div class='row'>
-                            <div>
-                                <h2 id='attack-player'>{{ attack-player }}</h2>
-                            </div>
-                        </div>                        
-                        <div class='row'>
-                            <div>
-                                
-                                <h2 id='defense-player'>{{ defense-player }}</h2>
-                            </div>
-                        </div>
-                        <div class='row'>
-                            <div>
-                                <h2 id='speed-player'>{{ speed-player }}</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='col-md-5'>
-                        <img src='https://s-media-cache-ak0.pinimg.com/736x/9a/34/3b/9a343bfc65a2c9e582b0afc7d67a3b4b.jpg' class='char-pix' alt='Character' />
-                    </div>
-                </div>
-                <div class='row'>
-                    <button class='btn btn-attack' onclick="PlayerMoves.calcAttack()" id='start'>Climb Tower & Attack!</button>
-                    <button class='btn btn-attack' onclick="GameManager.setFight()" id='start'>Find an Enemy!</button>
-                    <button class='btn btn-attack' id='start_game'>Climb Tower &amp; Attack!</button>
-                    <button class='btn btn-attack' onclick="GameManager.setFight()" id='find_enemy'>Find Your Next Enemy!</button>
-                </div>
-                {{/each}}
+            <!-- Player Div -->
+            <div class='col-md-5 player-div' id='player-div' >
+                {{{ body-player }}}
             </div>
             <!-- VS Column -->
             <div class='col-md-2'>
@@ -77,41 +37,9 @@
                     <img src='https://comicvine1.cbsistatic.com/uploads/original/11130/111300953/5440456-4284025-6271335549-vs.pn.png' alt='versus' class="versus" />
                 </div>
             </div>
-            <!-- Troll Div -->
+            <!-- Enemy Div -->
             <div class='col-md-5 opponent-div' id='troll-div'>
-                {{#each enemy}}
-                <!-- Champion Row: Name / Health -->
-                <div class='row'>
-                    <div class='col-md-8'>
-                        <h2 class='enemy-name'>{{enemy-name}}</h2>
-                    </div>
-                    <div class='col-md-4'>
-                        <h2 class='champ-health' id='health-enemy'>{{health-enemy}}</h2>
-                    </div>
-                </div>
-                <div class='row'>
-                    <div class='col-md-5'>
-                        <img src='https://i.imgur.com/yyt7bs8.jpg' class='enemy-pix' alt='enemy' />
-                    </div>
-                    <div class='col-md-5 boost'>
-                        <div class='row'>
-                            <div>
-                            <h2 id='attack-enemy'>{{attack-enemy}}</h2>
-                            </div>
-                        </div>                        
-                        <div class='row'>
-                            <div>
-                                <h2 id='defense-enemy'>{{defense-enemy}}</h2>
-                            </div>
-                        </div>
-                        <div class='row'>
-                            <div>
-                                <h2 id='speed-enemy'>{{speed-enemy}}</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {{/each}}
+                {{{ body-enemy }}}
             </div>
         </div>
         <div class="row cont-bg-mgr" style="margin-top: 3rem;">
