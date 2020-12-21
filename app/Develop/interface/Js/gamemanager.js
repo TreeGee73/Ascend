@@ -1,4 +1,4 @@
-let playerSelect = require("player");
+const playerSelect = require("champs");
 
 let GameManager = {
   setGameStart: function (classType) {
