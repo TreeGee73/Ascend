@@ -1,0 +1,69 @@
+<!-- Custom -->
+<script src="assets/js/gamemanager.js"></script>
+<script src="assets/js/player.js"></script>
+<script src="assets/js/enemy.js"></script>
+
+<div class="body-combat">
+  <!-- Header: Contains only hero image -->
+  <header class="hero"></header>
+
+  <!-- Container: Character and Opponent Windows -->
+  <section class="content container">
+    <div class="row">
+      <!-- Player Div -->
+      <div class="col-md-5 player-div" id="player-div">
+        {{>player player=player}}
+      </div>
+      <!-- VS Column -->
+      <div class="col-md-2">
+        <div class="row">
+          <img
+            src="https://comicvine1.cbsistatic.com/uploads/original/11130/111300953/5440456-4284025-6271335549-vs.pn.png"
+            alt="versus"
+            class="versus"
+          />
+        </div>
+      </div>
+      <!-- Enemy Div -->
+      <div class="col-md-5 opponent-div" id="troll-div">
+        {{>enemy enemy=enemy}}
+      </div>
+    </div>
+    {{!-- <div class="row cont-bg-mgr" style="margin-top: 3rem">
+      <div class="col-md-3">
+        <div class="card player-card">
+          <div class="card-header">
+            <h3 class="player-name" id="player-name">SmashnBtns02</h3>
+          </div>
+          <div class="card-body player-info" id="player-info">
+            Level 1 Warrior<br />
+            XP: <span id="player-exp">{{ player }}</span
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gold: 0
+          </div>
+        </div>
+      </div> --}}
+      <div class="col-md-6">
+        <div class="card gameplay-card">
+          <div class="card-header">
+            <h3 class="player-name" id="game-spam">Gameplay Window</h3>
+          </div>
+          <div class="card-body gameplay-info" id="gameplay-info">
+            You attack for 50 points of damage.<br />
+            Troll attacks for 60 points of damage.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card skill-card">
+          <div class="card-header">
+            <h3 class="player-name" id="skill-name">Choose Your Skill</h3>
+          </div>
+          <div class="card-body skill-info" id="skill-info">
+            Sprinkle * Sprinkle<br />
+            Future Development
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
