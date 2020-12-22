@@ -60,17 +60,7 @@ let GameManager = {
     //  + player.health + '</p><p class="attack-player">Attack: ' + player.attack + '</p><p class="defense-player">Defense: ' + player.defense +
     //  '</p><p class="speed-player">Speed: ' +player.speed + '</p><p class="player-exp">XP: '+ player.exp + '</p></div>';
     let getInterface = document.querySelector(".interface");
-    getInterface.innerHTML = `<div class="row"><div class="col-md-5 player-div"><div class="row"><div class="col-md-8">
-    <h2 class="champName" id="player-name">${player.name}</h2></div><div class="col-md-4"><h2 class="champ-health" 
-    id="player-health">HP: ${player.health}</h2></div></div><div class="row"><div class="col-md-5 boost"><div class="row">
-    <div><h2 id="player-attack">Attack: ${player.attack}</h2></div></div><div class="row"><div><h2 id="player-defense">
-    Defense: ${player.defense}</h2></div></div><div class="row"><div><h2 id="player-speed">Speed: ${player.speed}
-    </h2></div></div><div class="row"><div><h2 id="player-exp">Exp: ${player.exp}</h2></div></div></div><div 
-    class="col-md-5"><img src="../public/assets/images/${player.image}" class="char-pix" alt="${player.name}" 
-    /></div></div><div class="row actions"><a href="#" onclick="GameManager.setFight()"><button 
-    class="btn btn-prefight" id="find-enemy">Find an Enemy!</button></a></div></div><div class="col-md-2">
-    <div class="row"><img src="https://comicvine1.cbsistatic.com/uploads/original/11130/111300953/5440456-4284025-6271335549-vs.pn.png"
-     alt="versus" class="versus" /></div></div><div class="col-md-5 enemy"><div class='row'></div></div>`;
+    getInterface.innerHTML = `<div class="row"><div class="col-md-5 player-div"><div class="row"><div class="col-md-8"><h2 class="champName" id="player-name">${player.name}</h2></div><div class="col-md-4"><h2 class="champ-health" id="player-health">HP: ${player.health}</h2></div></div><div class="row"><div class="col-md-5 boost"><div class="row"><div><h2 id="player-attack">Attack: ${player.attack}</h2></div></div><div class="row"><div><h2 id="player-defense">Defense: ${player.defense}</h2></div></div><div class="row"><div><h2 id="player-speed">Speed: ${player.speed}</h2></div></div><div class="row"><div><h2 id="player-exp">Exp: ${player.exp}</h2></div></div></div><div class="col-md-5"><img src="../public/assets/images/${player.image}" class="char-pix" alt="${player.name}" /></div></div><div class="row actions"><a href="#" onclick="GameManager.setFight()"><button class="btn btn-prefight" id="find-enemy">Find an Enemy!</button></a></div></div><div class="col-md-2"><div class="row"><img src="https://comicvine1.cbsistatic.com/uploads/original/11130/111300953/5440456-4284025-6271335549-vs.pn.png" alt="versus" class="versus" /></div></div><div class="col-md-5 enemy" style="show"></div>`;
   },
   // setPreFight: function() {
   //     let getHeader = document.querySelector(".header");
@@ -135,6 +125,6 @@ let GameManager = {
     // '.jpg" class="img-avatar"><div><h3>' + enemy.classType + '</h3><p class="health-enemy">Health: '
     //  + enemy.health + '</p><p>Attack: ' + enemy.attack + '</p><p>Defense: ' + enemy.defense +
     //  '</p><p>Speed: ' +enemy.speed + '</p><p class="enemy-exp">XP: '+ enemy.exp + '</p></div>';
-    getEnemy.innerHTML = `<div class="col-md-8"><h2 class="enemy-name">${enemy.classType}</h2></div><div class="col-md-4"><h2 class="champ-health" id="enemy-health">HP: ${enemy.health}</h2></div><div class="row"><div class="col-md-5"><img src="../public/assets/images/${enemy.image}" class="char-pix" alt="${enemy.classType}" /></div></div>`;
+    getEnemy.innerHTML = `<div class="row"><div class="col-md-8"><h2 class="enemyName" id="enemy-name">${enemy.classType}</h2></div><div class="col-md-4"><h2 class="enemyHealth" id="enemy-health">HP: ${enemy.health}</h2></div></div><div class="row"><div class="col-md-5"><img src="../public/assets/images/${enemy.image}" class="enemy-pix" alt="${enemy.classType}" /></div></div>`;
   },
 };
