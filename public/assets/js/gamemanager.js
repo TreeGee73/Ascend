@@ -12,7 +12,7 @@ let GameManager = {
           200,
           50,
           40,
-          60,
+          50,
           0,
           "warrior.jpg"
         );

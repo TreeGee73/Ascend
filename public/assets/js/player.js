@@ -30,35 +30,25 @@ function Player(classType, name, health, attack, defense, speed, exp, image) {
     
     let PlayerMoves = {
       calcAttack: function () {
+        let getPlayerHealth = document.querySelector("#player-health");
       let getEnemyHealth = document.querySelector("#enemy-health");
       let getEnemyAttack = document.querySelector("#enemy-attack");
       let getPlayerDefense = document.querySelector("#player-defense");
       let getEnemyDefense = document.querySelector("#enemy-defense");
       let getPlayerName = document.querySelector("#player-name");
-      let getPlayerHealth = document.querySelector("#player-health");
       let getPlayerAttack = document.querySelector("#player-attack");
       let getPlayerExp = document.querySelector("#player-exp");
       let getEnemyExp = document.querySelector("#enemy-exp");
       let getPlayerSpeed = document.querySelector("#player-speed");
       let getEnemySpeed = document.querySelector("#enemy-speed");
-
-
-    // who attacks first
-    let playerAttack = function () {
-      let calcBaseDamage;
-      calcBaseDamage = player.attack - enemy.defense;
-      
-      let offsetDamage = Math.floor(Math.random() * Math.floor(10));
-      let calcTotal = calcBaseDamage + offsetDamage;
-      return calcTotal;
-    };
-    // let renderStats = function (){
-      //   getPlayerHealth.textContent = "Health: " + player.health;
-      //   getPlayerAttack.textContent = "Attack: " + player.attack;
-      //   getPlayerDefense.textContent = "Defense: " + player.defense;
-      //   getPlayerSpeed.textContent = "Speed: " + player.speed;
-      //   getPlayerExp.textContent = "XP: " + player.exp;
-      // };
+      let playerAttack = function () {
+        let calcBaseDamage;
+        calcBaseDamage = player.attack - enemy.defense;
+        
+        let offsetDamage = Math.floor(Math.random() * Math.floor(10));
+        let calcTotal = calcBaseDamage + offsetDamage;
+        return calcTotal;
+      };
       let enemyAttack = function () {
         let calcBaseDamage;
         calcBaseDamage = enemy.attack - player.defense;
@@ -67,6 +57,16 @@ function Player(classType, name, health, attack, defense, speed, exp, image) {
         let calcTotal = calcBaseDamage + offsetDamage;
         return calcTotal;
       };
+
+
+    // who attacks first
+    // let renderStats = function (){
+      //   getPlayerHealth.textContent = "Health: " + player.health;
+      //   getPlayerAttack.textContent = "Attack: " + player.attack;
+      //   getPlayerDefense.textContent = "Defense: " + player.defense;
+      //   getPlayerSpeed.textContent = "Speed: " + player.speed;
+      //   getPlayerExp.textContent = "XP: " + player.exp;
+      // };
       let levelUp = function () {
         player.health += 25;
         player.attack += 10;
@@ -157,6 +157,16 @@ function Player(classType, name, health, attack, defense, speed, exp, image) {
     }
   },
   flee : function(){
+    let getPlayerHealth = document.querySelector("#player-health");
+    let getEnemyHealth = document.querySelector("#enemy-health");
+    let enemyAttack = function () {
+      let calcBaseDamage;
+      calcBaseDamage = enemy.attack - player.defense;
+      
+      let offsetDamage = Math.floor(Math.random() * Math.floor(10));
+      let calcTotal = calcBaseDamage + offsetDamage;
+      return calcTotal;
+    };
   if (player.speed >= enemy.speed){
   alert("Flee succesful!...Scaredy Cat");
   toggleEnemy();
