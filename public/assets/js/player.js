@@ -14,6 +14,19 @@ function Player(classType, name, health, attack, defense, speed, exp, image) {
 
 let PlayerMoves = {
   calcAttack: function () {
+    let getEnemyHealth = document.querySelector("#enemy-health");
+    let getEnemyAttack = document.querySelector("#enemy-attack");
+    let getPlayerDefense = document.querySelector("#player-defense");
+    let getEnemyDefense = document.querySelector("#enemy-defense");
+    let getPlayerName = document.querySelector("#player-name");
+    let getPlayerHealth = document.querySelector("#player-health");
+    let getPlayerAttack = document.querySelector("#player-attack");
+    let getPlayerExp = document.querySelector("#player-exp");
+    let getEnemyExp = document.querySelector("#enemy-exp");
+    let getPlayerSpeed = document.querySelector("#player-speed");
+    let getEnemySpeed = document.querySelector("#enemy-speed");
+
+
     // who attacks first
     let playerAttack = function () {
       let calcBaseDamage;
@@ -45,46 +58,37 @@ let PlayerMoves = {
         player.speed += 5;
         player.exp -= 100;
         // renderstats();
-        getPlayerHealth.textContent = "Health: " + player.health;
-        getPlayerAttack.textContent = "Attack: " + player.attack;
-        getPlayerDefense.textContent = "Defense: " + player.defense;
-        getPlayerSpeed.textContent = "Speed: " + player.speed;
-        getPlayerExp.textContent = "XP: " + player.exp;
+        getPlayerHealth.innerHTML = "Health: " + player.health;
+        getPlayerAttack.innerHTML = "Attack: " + player.attack;
+        getPlayerDefense.innerHTML = "Defense: " + player.defense;
+        getPlayerSpeed.innerHTML = "Speed: " + player.speed;
+        getPlayerExp.innerHTML = "XP: " + player.exp;
       };
-      let getPlayerName = document.querySelector("#player-name");
-      let getPlayerHealth = document.querySelector("#health-player");
-      let getPlayerAttack = document.querySelector("#attack-player");
       // integrate these to html
-      let getEnemyHealth = document.querySelector("#health-enemy");
-      let getEnemyAttack = document.querySelector("#attack-enemy");
-      let getPlayerDefense = document.querySelector("#defense-player");
-      let getEnemyDefense = document.querySelector("#defense-enemy");
       // let getPlayerSpeed = document.querySelector("#speed-player");
       // let getEnemySpeed = document.querySelector("#speed-enemy");
       // integrate these to html
-      let getPlayerExp = document.querySelector("#player-exp");
-      let getEnemyExp = document.querySelector("#enemy-exp");
-      let getPlayerSpeed = player.speed;
-      let getEnemySpeed = enemy.speed;
-      // if (player.speed >= enemy.speed)
+      getPlayerSpeed = player.speed;
+      getEnemySpeed = enemy.speed;
+      // if (player.speed >= enemy.speed) {
       if (getPlayerSpeed >= getEnemySpeed) {
         let calcTotal = playerAttack();
         enemy.health = enemy.health - calcTotal;
         alert("You hit for " + calcTotal);
         if (enemy.health <= 0) {
           alert("You win!");
-        debugger;
-        getPlayerHealth.innerHTML = "Health: " + player.health;
-        getEnemyHealth.innerHTML = "Health: 0";
+        // debugger;
+        getPlayerHealth.textContent = "Health: " + player.health;
+        getEnemyHealth.textContent = "Health: 0";
         player.exp = player.exp + enemy.exp;
-        getPlayerExp.innerHTML = "XP: " + player.exp;
+        getPlayerExp.textContent = "XP: " + player.exp;
         if (player.exp >= 100) {
           levelUp();
           // console.log(player.exp);
         }
         // setPreFight();
       } else {
-        getEnemyHealth.innerHTML = "Health: " + enemy.health;
+        getEnemyHealth.textContent = "Health: " + enemy.health;
 
         let totalDamage = enemyAttack();
 
@@ -92,10 +96,10 @@ let PlayerMoves = {
         alert("Enemy hit for " + totalDamage);
         if (player.health <= 0) {
           alert("You Dead!");
-          getPlayerHealth.innerHTML = "Health: 0";
-          getEnemyHealth.innerHTML = "Health: " + enemy.health;
+          getPlayerHealth.textContent = "Health: 0";
+          getEnemyHealth.textContent = "Health: " + enemy.health;
         } else {
-          getPlayerHealth.innerHTML = "Health: " + player.health;
+          getPlayerHealth.textContent = "Health: " + player.health;
         }
       }
     } else if (getEnemySpeed >= getPlayerSpeed) {
@@ -104,10 +108,10 @@ let PlayerMoves = {
       alert("Enemy hit for " + calcTotal);
       if (player.health <= 0) {
         alert("You lose!");
-        getEnemyHealth.innerHTML = "Health: " + enemy.health;
-        getPlayerHealth.innerHTML = "Health: 0";
+        getEnemyHealth.textContent = "Health: " + enemy.health;
+        getPlayerHealth.textContent = "Health: 0";
       } else {
-        getPlayerHealth.innerHTML = "Health: " + player.health;
+        getPlayerHealth.textContent = "Health: " + player.health;
 
         let totalDamage = playerAttack();
 
@@ -115,11 +119,11 @@ let PlayerMoves = {
         alert("You hit for " + totalDamage);
         if (enemy.health <= 0) {
           alert("You Win!");
-          debugger;
-          getPlayerHealth.innerHTML = "Health: " + player.health;
-          getEnemyHealth.innerHTML = "Health: 0";
+          // debugger;
+          getPlayerHealth.textContent = "Health: " + player.health;
+          getEnemyHealth.textContent = "Health: 0";
           player.exp = player.exp + enemy.exp;
-          getPlayerExp.innerHTML = "XP: " + player.exp;
+          getPlayerExp.textContent = "XP: " + player.exp;
           if (player.exp >= 100) {
             levelUp();
             // renderstats();
@@ -128,7 +132,7 @@ let PlayerMoves = {
           }
           // setPreFight();
         } else {
-          getEnemyHealth.innerHTML = "Health: " + enemy.health;
+          getEnemyHealth.textContent = "Health: " + enemy.health;
         }
       }
     }
@@ -137,7 +141,7 @@ let PlayerMoves = {
   // if (player.speed >= enemy.speed){
   // alert("Flee succesful!...Scaredy Cat");
   // function toggleEnemy(){
-  // const enemyBox = document.querySelector("#");
+  // const enemyBox = document.querySelector("");
   //   if (#.style.display === "none"){
   //     #.style.display === "block"
   //   } else if {#.style.display === "none"};
