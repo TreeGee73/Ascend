@@ -1,7 +1,7 @@
 
 let player;
 
-function Player(classType, name, health, attack, defense, speed, exp) {
+function Player(classType, name, health, attack, defense, speed, exp, image) {
   this.classType = classType;
   this.name = name;
   this.health = health;
@@ -9,6 +9,7 @@ function Player(classType, name, health, attack, defense, speed, exp) {
   this.defense = defense;
   this.speed = speed;
   this.exp = exp;
+  this.image = image;
 }
 
 let PlayerMoves = {
