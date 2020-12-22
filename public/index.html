@@ -7,30 +7,18 @@
     <title>ASCEND - Climb the Tower</title>
     <!-- CSS -->
         <!-- Bootstrap -->
-        <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'
-        integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous'>
+            <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1' crossorigin='anonymous'>
         <!-- Google Fonts -->
-        <link rel='preconnect' href='https://fonts.gstatic.com'>
-        <link href='https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap' rel='stylesheet'>
+            <link rel='preconnect' href='https://fonts.gstatic.com'>
+            <link href='https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap' rel='stylesheet'>
         <!-- Custom -->
-        <link rel='stylesheet' href='../../assets/style.css'>
-        <!-- JavaScript -->
-        <!-- Bootstrap Required -->
-        <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'
-        integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW'
-        crossorigin='anonymous'></script>
-        <script src="Js/gamemanager.js"></script>
-        <script src="Js/player.js"></script>
-        <script src="Js/enemy.js"></script>
-        <!-- Custom -->
+            <link rel='stylesheet' href='../public/assets/css/style.css'>
 </head>
-
 <body class='body-index'>
     <!-- Header: Contains only hero image -->
     <header class='hero'></header>
-
-    <!-- Container: Text and Data Collection for Game from Player -->
-    <section class='content container cont-bg-mgr'>
+    <div class="header"></div>
+    <section class='content container cont-bg-mgr interface'>
         <div class='row'>
             <!-- Row 1: Challenge -->
             <div class='col-md-12'>
@@ -48,17 +36,13 @@
                 </form>
             </div>
         </div>
-        </div>
         <div class='row' style='margin-top: 2rem;'>
-            <!-- Row 3: Character Selection -->
-            <h1>Select Your Champion</h1>
-        </div>
-        <div class='row' style='margin-top: 2rem;'>
+            <h1>Choose your character</h1>
             <!-- Warrior Card -->
             <div class='col-md-3'>
                 <div class="card">
                     <header class="card__thumb">
-                        <img src="../../assets/images/warrior.jpg"/>
+                        <img src="../public/assets/images/warrior.jpg"/>
                     </header>
                     <div class="card__body">
                         <h2 class="card__title">Bruth Spiritreaper</h2>
@@ -66,7 +50,7 @@
                         <div class="card__subtitle">Warriors have high health, but have a slower attack speed</div>
                         <p class="card__description">Health: 200<br>Attack: 50<br>Defense: 40<br>Speed: 60</p>
                         <footer class="card__footer">
-                            <a href="combat.handlebars" class='btn btn-primary btn-start' id='warriorBtn'>Enter the Tower!</a>
+                            <a href='#' onclick="GameManager.setGameStart('warrior')"><button class='btn btn-primary btn-start'>Enter the Tower!</button></a>
                         </footer>
                     </div>
                 </div>
@@ -75,7 +59,7 @@
             <div class='col-md-3'>
                 <div class="card">
                     <header class="card__thumb">
-                        <img src="../../assets/images/rogue.jpg"/>
+                        <img src="../public/assets/images/rogue.jpg"/>
                     </header>
                     <div class="card__body">
                         <h2 class="card__title">Lacina</h2>
@@ -83,7 +67,7 @@
                         <div class="card__subtitle">Rogues have high speed, deal mediocre health damage, but have a chance to crit</div>
                         <p class="card__description">Health: 120<br>Attack: 70<br>Defense: 20<br>Speed: 100</p>
                         <footer class="card__footer">
-                            <a href="combat.handlebars" class='btn btn-primary btn-start' id='rogueBtn'>Enter the Tower!</a>
+                            <a href='#' onclick="GameManager.setGameStart('rogue')"><button class='btn btn-primary btn-start'>Enter the Tower!</button></a>
                         </footer>
                     </div>
                 </div>
@@ -92,7 +76,7 @@
             <div class='col-md-3'>
                 <div class="card">
                     <header class="card__thumb">
-                        <img src="../../assets/images/mage.jpg"/>
+                        <img src="../public/assets/images/mage.jpg"/>
                     </header>
                     <div class="card__body">
                         <h2 class="card__title">Ziu Qaim</h2>
@@ -100,7 +84,7 @@
                         <div class="card__subtitle">Mages have low health, but deal more damage</div>
                         <p class="card__description">Health: 100<br>Attack: 150<br>Defense: 0<br>Speed: 75</p>
                         <footer class="card__footer">
-                            <a href="combat.handlebars" class='btn btn-primary btn-start' id='mageBtn'>Enter the Tower!</a>
+                            <a href='#' onclick="GameManager.setGameStart('mage')"><button class='btn btn-primary btn-start'>Enter the Tower!</button></a>
                         </footer>
                     </div>
                 </div>
@@ -108,8 +92,7 @@
             <!-- Hunter Card -->
             <div class='col-md-3'>
                 <div class="card">
-                    <header class="card__thumb">
-                        <img src="../../assets/images/hunter.jpg"/>
+                    <header class="card__thumb"><img src="../public/assets/images/hunter.jpg"/>
                     </header>
                     <div class="card__body">
                         <h2 class="card__title">Gwendolyn Helton</h2>
@@ -117,21 +100,58 @@
                         <div class="card__subtitle">Hunters have a balance of health, speed, and damage</div>
                         <p class="card__description">Health: 150<br>Attack: 90<br>Defense: 30<br>Speed: 80</p>
                         <footer class="card__footer">
-                            <a href="combat.handlebars" class='btn btn-primary btn-start' id='hunterBtn'>Enter the Tower!</a>
+                            <a href='#' onclick="GameManager.setGameStart('hunter')"><button class='btn btn-primary btn-start'>Enter the Tower!</button></a>
                         </footer>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- <a href="#" onclick="GameManager.setGameStart('warrior')">
+            <img src="/images/warrior.jpg" alt="warrior">
+            <h3>Warrior</h3>
+            <p>Warriors have high health and slow speed</p>
+        </a> -->
+        <!-- <a href="#" onclick="GameManager.setGameStart('rogue')">
+            <img src="/images/rogue.jpg" alt="rogue">
+            <h3>Rogue</h3>
+            <p>High speed, mediocre health damage. chance to crit</p>
+        </a>
+        <a href="#" onclick="GameManager.setGameStart('mage')">
+            <img src="/images/mage.jpg" alt="mage">
+            <h3>Mage</h3>
+            <p>Low health high damage</p>
+        </a>
+        <a href="#" onclick="GameManager.setGameStart('hunter')">
+            <img src="/images/hunter.jpg" alt="hunter">
+            <h3>hunter</h3>
+            <p>Balanced fighter</p>
+        </a> -->
+        
     </section>
-        <!-- End Container -->
+    <!-- End Container -->
 
-        <!-- Footer -->
-        <footer>
-            <hr />
-            <h2>ASCEND &copy; AHANBCTG</h2>
-        </footer>
-        <script src="Js/name.js"></script>
+    <!-- Footer -->
+    <footer class='footer'>
+        <hr />
+        <h2>ASCEND &copy; AHANBCTG</h2>
+    </footer>
+    <!-- <div class="actions">
+
+    </div>
+    <div class="arena">
+
+    </div> -->
+    <!-- <div class="enemy">
+
+    </div> -->
+
+
+<!-- JavaScript -->
+    <!-- Bootstrap Required -->     
+        <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js' integrity='sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW' crossorigin='anonymous'></script>
+    <!-- Custom -->
+        <script src="../public/assets/js/gamemanager.js"></script>
+        <script src="../public/assets/js/player.js"></script>
+        <script src="../public/assets/js/enemy.js"></script>
 </body>
-
 </html>
