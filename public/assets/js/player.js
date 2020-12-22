@@ -13,6 +13,29 @@ function Player(classType, name, health, attack, defense, speed, exp, image) {
 }
 
 let PlayerMoves = {
+  toggleEnemy: function () {
+    const enemyBox = document.querySelector(".btn-flee");
+      if (enemyBox.style.display === "none"){
+        enemyBox.style.display === "block"
+      } else {enemyBox.style.display === "none"}
+      },
+    // playerAttack: function () {
+    //   let calcBaseDamage;
+    //   calcBaseDamage = player.attack - enemy.defense;
+        
+    //   let offsetDamage = Math.floor(Math.random() * Math.floor(10));
+    //   let calcTotal = calcBaseDamage + offsetDamage;
+    //   return calcTotal;
+    // },
+    // enemyAttack: function () {
+    //   let calcBaseDamage;
+    //   calcBaseDamage = enemy.attack - player.defense;
+      
+    //   let offsetDamage = Math.floor(Math.random() * Math.floor(10));
+    //   let calcTotal = calcBaseDamage + offsetDamage;
+    //   return calcTotal;
+    // },
+
   calcAttack: function () {
     let getEnemyHealth = document.querySelector("#enemy-health");
     let getEnemyAttack = document.querySelector("#enemy-attack");
@@ -80,7 +103,8 @@ let PlayerMoves = {
         // debugger;
         getPlayerHealth.textContent = "Health: " + player.health;
         getEnemyHealth.textContent = "Health: 0";
-        player.exp = player.exp + enemy.exp;
+        player.exp = player.exp += enemy.exp;
+        console.log(player.exp);
         getPlayerExp.textContent = "XP: " + player.exp;
         if (player.exp >= 100) {
           levelUp();
@@ -113,7 +137,7 @@ let PlayerMoves = {
       } else {
         getPlayerHealth.textContent = "Health: " + player.health;
 
-        let totalDamage = playerAttack();
+        let totalDamage = this.playerAttack();
 
         enemy.health = enemy.health - totalDamage;
         alert("You hit for " + totalDamage);
@@ -122,7 +146,7 @@ let PlayerMoves = {
           // debugger;
           getPlayerHealth.textContent = "Health: " + player.health;
           getEnemyHealth.textContent = "Health: 0";
-          player.exp = player.exp + enemy.exp;
+          player.exp = player.exp += enemy.exp;
           getPlayerExp.textContent = "XP: " + player.exp;
           if (player.exp >= 100) {
             levelUp();
@@ -137,29 +161,30 @@ let PlayerMoves = {
       }
     }
   },
-  // flee : function(){
-  // if (player.speed >= enemy.speed){
-  // alert("Flee succesful!...Scaredy Cat");
+  flee : function(){
+  if (player.speed >= enemy.speed){
+  alert("Flee succesful!...Scaredy Cat");
+  toggleEnemy();
   // function toggleEnemy(){
-  // const enemyBox = document.querySelector("");
-  //   if (#.style.display === "none"){
-  //     #.style.display === "block"
-  //   } else if {#.style.display === "none"};
+  // const enemyBox = document.querySelector(".btn-flee");
+  //   if (enemyBox.style.display === "none"){
+  //     enemyBox.style.display === "block"
+  //   } else {enemyBox.style.display === "none"}
   //   };
-  // }
-  // else {
-  //     let calcTotal = enemyAttack();
-  //     player.health = player.health - calcTotal;
-  //     alert("Enemy hit for " + calcTotal);
-  //     if (player.health <= 0) {
-  //     getEnemyHealth.innerHTML = "Health: " + enemy.health;
-  //     getPlayerHealth.innerHTML = "Health: 0";
-  //     alert("You lose!");
-  //     } else {
-  //       getPlayerHealth.innerHTML = "Health: " + player.health;
-  //     }
-  //   }
-  // },
+  }
+  else {
+      let calcTotal = enemyAttack();
+      player.health = player.health - calcTotal;
+      alert("Enemy hit for " + calcTotal);
+      if (player.health <= 0) {
+      getEnemyHealth.innerHTML = "Health: " + enemy.health;
+      getPlayerHealth.innerHTML = "Health: 0";
+      alert("You lose!");
+      } else {
+        getPlayerHealth.innerHTML = "Health: " + player.health;
+      }
+    }
+  },
   // guardUp : function(){
   // player.defense * 2 == player.defense;
   //   let totalDamage = enemyAttack();
