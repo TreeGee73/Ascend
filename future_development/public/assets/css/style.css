@@ -3,11 +3,9 @@
 h1 {
     font-weight: bold;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 h2 {
-    font-size: larger;
     text-align: center;
     margin-top: 2rem;
 }
@@ -17,19 +15,12 @@ h3 {
     text-align: center;
 }
 
-.footer {
-    position: fixed;
-    bottom: 0px;
-    text-align: center;
-    width: 100%;
-}
-
 /*  */
 /* Class styles used on all pages */
 /*  */
 
 .hero {
-    background-image: url('../public/assets/images/ascend.png');
+    background-image: url('/assets/images/ascend.png');
     height: 100px;
     margin: 2rem;
     margin-top: 0px;
@@ -48,7 +39,7 @@ h3 {
 /*  */
 
 .body-index {
-    background-image: url('../public/assets/images/tower_background.jpg');
+    background-image: url('/assets/images/tower_background.jpg');
     background-size: auto;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -186,17 +177,6 @@ h3 {
     background-color: #886327;
 }
 
-.btn-prefight {
-    background-color: #9f7634;
-    color: #111518;
-    height: 3rem;
-    width: 13rem;
-}
-
-.btn-prefight:hover {
-    background-color: #886327;
-}
-
 /* .btn-random {
     background-color: #9f7634;
     color: #111518;
@@ -212,7 +192,7 @@ h3 {
 /*  */
 
 .body-combat{
-    background-image: url('../public/assets/images/floor1_background.jpg');
+    background-image: url('/assets/images/floor1_background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -237,9 +217,9 @@ h3 {
     border-radius: inherit;
 }
 
-.champName {
+.champ-name {
     position:relative;
-    left: 25px;
+    left: 15px;
     top: -35px;
     text-align: left;
     font-size: 1.25rem;
@@ -247,7 +227,7 @@ h3 {
 
 .champ-health {
     position: relative;
-    right: 25px;
+    right: 15px;
     top: -35px;
     text-align: right;
     font-size: 1.25rem;
