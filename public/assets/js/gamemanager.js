@@ -135,6 +135,6 @@ let GameManager = {
     // '.jpg" class="img-avatar"><div><h3>' + enemy.classType + '</h3><p class="health-enemy">Health: '
     //  + enemy.health + '</p><p>Attack: ' + enemy.attack + '</p><p>Defense: ' + enemy.defense +
     //  '</p><p>Speed: ' +enemy.speed + '</p><p class="enemy-exp">XP: '+ enemy.exp + '</p></div>';
-    getEnemy.innerHTML = `<div class="col-md-8"><h2 class="enemy-name">${enemy.classType}</h2></div><div class="col-md-4"><h2 class="champ-health" id="enemy-health">HP: ${enemy.health}</h2></div></div><div class="row"><div class="col-md-5"><div class="col-md-5"><img src="../public/assets/images/${enemy.image}" class="char-pix" alt="${enemy.classType}" /></div><div class="col-md-5 boost"><div class="row"><div><h2 id="enemy-attack">Attack: ${enemy.attack}</h2></div></div><div class="row"><div><h2 id="enemy-defense">Defense: ${enemy.defense}</h2></div></div><div class="row"><div><h2 id="enemy-speed">Speed: ${enemy.speed}</h2></div></div>`;
+    getEnemy.innerHTML = `<div class="col-md-8"><h2 class="enemy-name">${enemy.classType}</h2></div><div class="col-md-4"><h2 class="champ-health" id="enemy-health">HP: ${enemy.health}</h2></div><div class="row"><div class="col-md-5"><img src="../public/assets/images/${enemy.image}" class="char-pix" alt="${enemy.classType}" /></div></div>`;
   },
 };
