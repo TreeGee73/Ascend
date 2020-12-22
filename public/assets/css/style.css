@@ -30,7 +30,7 @@ h3 {
 /*  */
 
 .hero {
-    background-image: url('../public/assets/images/ascend.png');
+    background-image: url('../images/ascend.png');
     height: 100px;
     margin: 2rem;
     margin-top: 0px;
@@ -49,7 +49,7 @@ h3 {
 /*  */
 
 .body-index {
-    background-image: url('../public/assets/images/tower_background.jpg');
+    background-image: url('../images/tower_background.jpg');
     background-size: auto;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -228,8 +228,8 @@ h3 {
 
 /* Player Character Div */
 .player-div {
-    background-color: rgba(76, 75, 80, 0.5);
-    border: .5rem solid #4c4c4f;
+    /* background-color: rgba(76, 75, 80, 0.5);
+    border: .5rem solid #4c4c4f; */
     justify-content: center;
     padding: 3rem;
 }
@@ -299,12 +299,14 @@ h3 {
 
 /* Enemy Character Div */
 
+
+
 .enemy-pix {
     max-width: 18rem;
     border: .5rem;
     border-color: #4c4c4f;
     border-radius: inherit;
-    margin-left: 5rem;
+    margin-top: 2.75rem;
 }
 
 .opponent-div {
@@ -314,19 +316,17 @@ h3 {
     padding: 3rem;
 }
 
-.enemy-name {
+.enemyName {
     position:relative;
-    right: 15px;
-    top: -35px;
-    text-align: right;
+    left: 25px;
+    text-align: left;
     font-size: 1.25rem;
 }
 
-.enemy-health {
-    position:relative;
-    left: 15px;
-    top: -35px;
-    text-align: left;
+.enemyHealth {
+    position: relative;
+    right: 25px;
+    text-align: right;
     font-size: 1.25rem;
 }
 
