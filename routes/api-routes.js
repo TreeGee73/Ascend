@@ -2,21 +2,19 @@ const db = require("../models");
 
 module.exports = function (app) {
 
-    app.get("/api/enemy", async function (req, res) {
-        try {
-            res.json(await db.enemy.findAll());
-        } catch (err) {
-            console.log(err);
-            res.status(500).end();
-        }
+    app.get("/api/characterName", function (req, res) {
+      db.user.findAll({}).then(function(dbuser){
+        res.json(dbuser);
+      });
     });
 
-    app.get("/api/user", async function (req, res) {
+    app.post("/api/characterName", async function (req, res) {
         try {
-            res.json(await db.user.findAll());
+          await db.characterName.create(req.body);
+          res.json({ msg: "Added Player!" });
         } catch (err) {
-            res.status(500).end();
+          res.status(500).end();
         }
-    });
+      });
 
 }

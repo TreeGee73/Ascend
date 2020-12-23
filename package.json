@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/alanhuynh1021/Ascend-/issues"
   },
-  "homepage": "https://github.com/alanhuynh1021/Ascend-#readme"
+  "homepage": "https://github.com/alanhuynh1021/Ascend-#readme",
+  "directories": {
+    "doc": "docs"
+  }
 }
