@@ -194,131 +194,133 @@ function Player(classType, name, health, attack, defense, speed, exp, image) {
       }
     }
   },
-  guardUp : function(){
-    let getPlayerDefense = document.querySelector("#player-defense");
-    let getPlayerHealth = document.querySelector("#player-health");
-    let getEnemyHealth = document.querySelector("#enemy-health");
-    let enemyAttack = function () {
-      let calcBaseDamage;
-      calcBaseDamage = enemy.attack - player.defense;
+  // guardUp : function(){
+  //   let getPlayerDefense = document.querySelector("#player-defense");
+  //   let getPlayerHealth = document.querySelector("#player-health");
+  //   let getEnemyHealth = document.querySelector("#enemy-health");
+  //   let enemyAttack = function () {
+  //     let calcBaseDamage;
+  //     calcBaseDamage = enemy.attack - player.defense;
       
-      let offsetDamage = Math.floor(Math.random() * Math.floor(10));
-      let calcTotal = calcBaseDamage + offsetDamage;
-      return calcTotal;
-    };
-    player.defense * 2 === player.defense;
-    getPlayerDefense.innerHTML = "Defense" + player.defense
-    let totalDamage = enemyAttack();
-        player.health = player.health - totalDamage;
-        alert("Enemy hit for " + totalDamage);
-        player.defense/2 === player.defense;
-        if (player.health <= 0) {
-          alert("You Dead!");
-          getPlayerHealth.innerHTML = "Health: 0";
-          getEnemyHealth.innerHTML = "Health: " + enemy.health;
-        } else {
-          getPlayerHealth.innerHTML = "Health: " + player.health;
-      }
-  },
-  chargeUp : function(){
-    let getPlayerHealth = document.querySelector("#player-health");
-    let getEnemyHealth = document.querySelector("#enemy-health");
-    let getPlayerAttack = document.querySelector("#player-attack");
-    let enemyAttack = function () {
-      let calcBaseDamage;
-      calcBaseDamage = enemy.attack - player.defense;
-      let offsetDamage = Math.floor(Math.random() * Math.floor(10));
-      let calcTotal = calcBaseDamage + offsetDamage;
-      return calcTotal;
-    };
-    let playerAttack = function () {
-      let calcBaseDamage;
-      calcBaseDamage = player.attack - enemy.defense;  
-      let offsetDamage = Math.floor(Math.random() * Math.floor(10));
-      let calcTotal = calcBaseDamage + offsetDamage;
-      return calcTotal;
-      };
-      let calcTotal = enemyAttack();
-      player.health = player.health - calcTotal;
-      alert("Enemy hit for " + calcTotal);
-      if (player.health <= 0) {
-      getEnemyHealth.innerHTML = "Health: " + enemy.health;
-      getPlayerHealth.innerHTML = "Health: 0";
-      alert("You lose!");
-      } else {
-        getPlayerHealth.innerHTML = "Health: " + player.health;
-      };
-      if (getPlayerSpeed >= getEnemySpeed) {
-        calcTotal*2.5 ==calcTotal;
-        let calcTotal*2.5 = playerAttack();
-        enemy.health = enemy.health - calcTotal;
-        alert("You hit for " + calcTotal);
-        if (enemy.health <= 0) {
-          alert("You win!");
-        // debugger;
-        getPlayerHealth.textContent = "Health: " + player.health;
-        getEnemyHealth.textContent = "Health: 0";
-        player.exp = player.exp += enemy.exp;
-        console.log(player.exp);
-        getPlayerExp.textContent = "XP: " + player.exp;
-        calcTotal/2.5 ==calcTotal;
-        GameManager.setFight();
-        // restart
-        if (player.exp >= 100) {
-          levelUp();
-          // console.log(player.exp);
-        }
-        // setPreFight();
-      } else {
-        getEnemyHealth.textContent = "Health: " + enemy.health;
+  //     let offsetDamage = Math.floor(Math.random() * Math.floor(10));
+  //     let calcTotal = calcBaseDamage + offsetDamage;
+  //     return calcTotal;
+  //   };
+  //   player.defense * 2 === player.defense;
+  //   getPlayerDefense.innerHTML = "Defense" + player.defense
+  //   let totalDamage = enemyAttack();
+  //       player.health = player.health - totalDamage;
+  //       alert("Enemy hit for " + totalDamage);
+  //       player.defense/2 === player.defense;
+  //       if (player.health <= 0) {
+  //         alert("You Dead!");
+  //         getPlayerHealth.innerHTML = "Health: 0";
+  //         getEnemyHealth.innerHTML = "Health: " + enemy.health;
+  //       } else {
+  //         getPlayerHealth.innerHTML = "Health: " + player.health;
+  //     }
+  // },
+  // chargeUp : function(){
+  //   let getPlayerHealth = document.querySelector("#player-health");
+  //   let getEnemyHealth = document.querySelector("#enemy-health");
+  //   let getPlayerAttack = document.querySelector("#player-attack");
+  //   getPlayerSpeed = player.speed;
+  //   getEnemySpeed = enemy.speed;
+  //   let enemyAttack = function () {
+  //     let calcBaseDamage;
+  //     calcBaseDamage = enemy.attack - player.defense;
+  //     let offsetDamage = Math.floor(Math.random() * Math.floor(10));
+  //     let calcTotal = calcBaseDamage + offsetDamage;
+  //     return calcTotal;
+  //   };
+  //   let playerAttack = function () {
+  //     let calcBaseDamage;
+  //     calcBaseDamage = player.attack - enemy.defense;  
+  //     let offsetDamage = Math.floor(Math.random() * Math.floor(10));
+  //     let calcTotal = calcBaseDamage + offsetDamage;
+  //     return calcTotal;
+  //     };
+  //     let calcTotal = enemyAttack();
+  //     player.health = player.health - calcTotal;
+  //     alert("Enemy hit for " + calcTotal);
+  //     if (player.health <= 0) {
+  //     getEnemyHealth.innerHTML = "Health: " + enemy.health;
+  //     getPlayerHealth.innerHTML = "Health: 0";
+  //     alert("You lose!");
+  //     } else {
+  //       getPlayerHealth.innerHTML = "Health: " + player.health;
+  //     };
+  //     if (getPlayerSpeed >= getEnemySpeed) {
+  //       calcTotal*2.5 ==calcTotal;
+  //       let calcTotal = playerAttack();
+  //       enemy.health = enemy.health - calcTotal;
+  //       alert("You hit for " + calcTotal);
+  //       if (enemy.health <= 0) {
+  //         alert("You win!");
+  //       // debugger;
+  //       getPlayerHealth.textContent = "Health: " + player.health;
+  //       getEnemyHealth.textContent = "Health: 0";
+  //       player.exp = player.exp += enemy.exp;
+  //       console.log(player.exp);
+  //       getPlayerExp.textContent = "XP: " + player.exp;
+  //       calcTotal/2.5 ==calcTotal;
+  //       GameManager.setFight();
+  //       // restart
+  //       if (player.exp >= 100) {
+  //         levelUp();
+  //         // console.log(player.exp);
+  //       }
+  //       // setPreFight();
+  //     } else {
+  //       getEnemyHealth.textContent = "Health: " + enemy.health;
 
-        let totalDamage = enemyAttack();
+  //       let totalDamage = enemyAttack();
 
-        player.health = player.health - totalDamage;
-        alert("Enemy hit for " + totalDamage);
-        getPlayerHealth.textContent = "Health: 0";
-        getEnemyHealth.textContent = "Health: " + enemy.health;
-        if (player.health <= 0) {
-          alert("You Dead! Refresh to startover");
-        } else {
-          getPlayerHealth.textContent = "Health: " + player.health;
-        }
-      }
-    } else if (getEnemySpeed >= getPlayerSpeed) {
-      let calcTotal = enemyAttack();
-      player.health = player.health - calcTotal;
-      alert("Enemy hit for " + calcTotal);
-      getEnemyHealth.textContent = "Health: " + enemy.health;
-      getPlayerHealth.textContent = "Health: 0";
-      if (player.health <= 0) {
-        alert("You lose! Refresh to startover");
-      } else {
-        getPlayerHealth.textContent = "Health: " + player.health;
+  //       player.health = player.health - totalDamage;
+  //       alert("Enemy hit for " + totalDamage);
+  //       getPlayerHealth.textContent = "Health: 0";
+  //       getEnemyHealth.textContent = "Health: " + enemy.health;
+  //       if (player.health <= 0) {
+  //         alert("You Dead! Refresh to startover");
+  //       } else {
+  //         getPlayerHealth.textContent = "Health: " + player.health;
+  //       }
+  //     }
+  //   } else if (getEnemySpeed >= getPlayerSpeed) {
+  //     let calcTotal = enemyAttack();
+  //     player.health = player.health - calcTotal;
+  //     alert("Enemy hit for " + calcTotal);
+  //     getEnemyHealth.textContent = "Health: " + enemy.health;
+  //     getPlayerHealth.textContent = "Health: 0";
+  //     if (player.health <= 0) {
+  //       alert("You lose! Refresh to startover");
+  //     } else {
+  //       getPlayerHealth.textContent = "Health: " + player.health;
 
-        let totalDamage = playerAttack();
+  //       let totalDamage = playerAttack();
 
-        enemy.health = enemy.health - totalDamage;
-        alert("You hit for " + totalDamage);
-        if (enemy.health <= 0) {
-          alert("You Win!");
-          // debugger;
-          getPlayerHealth.textContent = "Health: " + player.health;
-          getEnemyHealth.textContent = "Health: 0";
-          player.exp = player.exp += enemy.exp;
-          getPlayerExp.textContent = "XP: " + player.exp;
-          GameManager.setFight();
-          // restart
-          if (player.exp >= 100) {
-            levelUp();
-            // renderstats();
+  //       enemy.health = enemy.health - totalDamage;
+  //       alert("You hit for " + totalDamage);
+  //       if (enemy.health <= 0) {
+  //         alert("You Win!");
+  //         // debugger;
+  //         getPlayerHealth.textContent = "Health: " + player.health;
+  //         getEnemyHealth.textContent = "Health: 0";
+  //         player.exp = player.exp += enemy.exp;
+  //         getPlayerExp.textContent = "XP: " + player.exp;
+  //         GameManager.setFight();
+  //         // restart
+  //         if (player.exp >= 100) {
+  //           levelUp();
+  //           // renderstats();
             
-            // console.log(player.exp);
-          }
-          // setPreFight();
-        } else {
-          getEnemyHealth.textContent = "Health: " + enemy.health;
-        }
-      }
-    }
-}
+  //           // console.log(player.exp);
+  //         }
+  //         // setPreFight();
+  //       } else {
+  //         getEnemyHealth.textContent = "Health: " + enemy.health;
+  //       }
+  //     }
+  //   }
+
 }
