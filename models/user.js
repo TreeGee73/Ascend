@@ -3,13 +3,13 @@ module.exports = function (sequelize, DataTypes) {
       name: DataTypes.STRING,
     });
 
-    user.associate = function (models) {
-      models.user.hasMany(models.characterName, {
-        foreignKey: {
-          allowNull: false,
-        },
-      });
-    };
+    // user.associate = function (models) {
+    //   models.user.hasMany(models.characterName, {
+    //     foreignKey: {
+    //       allowNull: false,
+    //     },
+    //   });
+    // };
 
     return user;
   };
