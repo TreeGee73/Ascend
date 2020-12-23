@@ -1,5 +1,3 @@
-
-
 $(document).ready(function () {
     let userSelect = $("#userName")
     let userForm = $("#user")

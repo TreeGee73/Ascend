@@ -320,8 +320,5 @@ function Player(classType, name, health, attack, defense, speed, exp, image) {
         }
       }
     }
-
-    
-      
 }
 }
