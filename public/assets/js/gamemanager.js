@@ -120,6 +120,8 @@ let GameManager = {
     getActions.innerHTML =
       '<a href="#" class="btn-attack" onclick="PlayerMoves.calcAttack()"><button class="btn btnAttack" id="start">Attack!</button></a>' +
       '<a href="#" class="btn-flee" onclick="PlayerMoves.flee()"><button class="btn btnFlee">Flee!</button></a>';
+      // '<a href="#" class="btn-guard" onclick="PlayerMoves.guardUp()"><button class="btn btnGuard">Guard!</button></a>';
+      // '<a href="#" class="btn-charge" onclick="PlayerMoves.chargeUp()"><button class="btn btnCharge">Flee!</button></a>';
     // add other actions above as well as in playerMoves in player js
     // getEnemy.innerHTML = '<img src="images/' + enemy.classType.toLowerCase() +
     // '.jpg" class="img-avatar"><div><h3>' + enemy.classType + '</h3><p class="health-enemy">Health: '
