@@ -1,5 +1,3 @@
-const user = require("../../../models/user");
-
 $(document).ready(function () {
     let userSelect = $("#userName")
     let userForm = $("#user")
